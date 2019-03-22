@@ -1,10 +1,5 @@
  _**DSCVR**_
 ===
-## Theme demo
-
-[view demo](demo.html)
-
-**Note:** _if either this page or the demo page look un-styled. that means you have not run your build yet or there is an issue preventing the build_
 
 
 ## Getting Started
@@ -25,11 +20,16 @@
 
 1. Clone Repository
 1. Open CLI at ``dscvr/src/`` or using Github ``cmd + ` `` then ``cd src``
-1. enter ``npm install``
-1. enter``npm run build --watch``
+ 1. enter ``npm install``
+ 1. enter``npm run build --watch``
 1. Using Github ``cmd + shift + A`` ``Repository>Open in Editor Name``
 
 _once your editor of choice is open you are ready to work on the project._
+
+## Theme demo
+Once you've followed the Steps, Check to see verify if it worked go **[View the Demo](demo.html)** The result should look very colorful and styled.
+
+**Note:** _if either this page or the demo page look un-styled. that means you have not run your build yet or there is an issue preventing the build_
 
 
 ## Resources
