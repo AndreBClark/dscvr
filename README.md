@@ -1,12 +1,15 @@
-# **DSCVR**
+ _**DSCVR**_
+===
+## Theme demo
+
+[view demo](/demo.html)
 
 
-Resources
-======
+
+## Resources
 
 
-A list of links and Resources for learning more web design stuff
-[Resource List Repository](https://github.com/AndreBClark/WebStudentResources)
+Here is A list of links and Resources for learning more web design stuff. full list repo: [Resource List Repository](https://github.com/AndreBClark/WebStudentResources)
 
 
 ### UI/UX
