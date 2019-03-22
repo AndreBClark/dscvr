@@ -2,7 +2,7 @@
 ===
 ## Theme demo
 
-[view demo](/demo.html)
+[view demo](demo.html)
 
 
 
