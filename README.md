@@ -32,8 +32,15 @@ Once you've followed the Steps, verify if it worked by **[Viewing the Demo](demo
 **Note:** _if either this page or the demo page look un-styled. that means you have not run your build yet or there is an issue preventing the build_
 
 
-## Resources
+### 6. Working on the project
+1. Open github Desktop and open terminal
+1. In terminal Enter `cd src` to move to development folder
+1. enter `npm run build --watch`
+1. leave the terminal open while working
+1.  `--watch` will auto update your changes to you the assets folder locally
 
+
+## Resources
 
 Here is A list of links and Resources for learning more web design stuff. full list repo: [Resource List Repository](https://github.com/AndreBClark/WebStudentResources)
 
