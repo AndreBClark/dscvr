@@ -5,7 +5,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-
+ 	mode: 'development',
     entry: {
         "app": "./js/_entry.js",
         // "app.min": "./js/_entry.js",  // no need for second min file when using production build
