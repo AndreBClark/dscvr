@@ -1,0 +1,24 @@
+/*
+
+What are components?
+
+Components are often used in the context of a module, also referred to as
+"module-components". But in this context these are "utility-components".
+Utility-components do not belong to a module. They are for a global use-case
+such as buttons, labels, or headings.
+
+
+Here we might override some vendor provided utility components or create some
+of our own. A common vendor override is changing the colors for buttons or
+labels. A common custom component is creating heading styles to visually
+emulate h1-h6 to avoid using the native html heading tags for sizing purposes.
+
+
+Brad Frost Atomic Design:
+component -> atom
+module    -> molecule
+section   -> organism
+
+http://bradfrost.com/blog/post/atomic-web-design/
+
+*/

@@ -1,0 +1,15 @@
+/*
+
+What are sections?
+
+Sections usually make up a portion of an overall template but are shared among other pages.
+They are not modules, but usually a group of modules.
+
+Brad Frost Atomic Design:
+component -> atom
+module    -> molecule
+section   -> organism
+
+http://bradfrost.com/blog/post/atomic-web-design/
+
+*/

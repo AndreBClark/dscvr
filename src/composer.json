@@ -1,0 +1,9 @@
+{
+  "require": {
+    "phpmailer/phpmailer": "5.2.*",
+    "gregwar/image": "2.*"
+  },
+  "config": {
+    "vendor-dir": "../lib/vendor"
+  }
+}

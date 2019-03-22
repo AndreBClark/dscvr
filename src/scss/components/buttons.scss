@@ -1,0 +1,24 @@
+
+.button {
+    background: $color-primary;
+    &:focus,
+    &:hover {
+        background: darken($color-primary, 10%);
+    }
+    &.secondary {
+        background: $color-gray;
+        &:focus,
+        &:hover {
+            background: darken($color-gray, 10%);
+        }
+    }
+    &.success {
+        background: $color-success;
+        color: #fff;
+        &:focus,
+        &:hover {
+            background: darken($color-success, 10%);
+            color: #fff;
+        }
+    }
+}

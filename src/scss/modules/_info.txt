@@ -1,0 +1,31 @@
+/*
+
+What are modules?
+
+Modules are a group of components usually intended to be used in multiple instances.
+
+An example module may look something like the following:
+
+.cool-tile {       // module name
+    &__heading {}     // module-component  (native to module)
+    &__subheading {}  // module-component  (native to module)
+    &__intro {}       // module-component  (native to module)
+    &__thumb {}       // module-component  (native to module)
+}
+
+<div class="cool-tile">
+    <div class="cool-tile__heading">Cool Tile Heading</div>
+    <div class="cool-tile__subheading">Cool Tile Sub-Heading</div>
+    <p class="cool-tile__intro">This is a simple line of text</p>
+    <img src="example.jpg" alt="" class="cool-tile__img">
+</div>
+
+
+Brad Frost Atomic Design:
+component -> atom
+module    -> molecule
+section   -> organism
+
+http://bradfrost.com/blog/post/atomic-web-design/
+
+*/

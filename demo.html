@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack Starter</title>
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+
+<div class="grid-container">
+
+  <h1>Theme Base Configuration</h1>
+  <p class="callout callout--demo">Update the theme default configuration in: <span>./src/scss/helpers/_variables.scss</span></p>
+
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-6">
+      <p class="demo-heading">Body text w/ link</p>
+      <p>Lorem ipsum dolor sit amet, <a href="http://www.the-algorithm.net/">with an example link</a>.</p>
+    </div>
+    <div class="cell medium-6">
+      <p class="demo-heading">Foundation Buttons</p>
+      <a href="#" class="button">Primary</a>
+      <a href="#" class="button secondary">Secondary</a>
+      <a href="#" class="button success"><i class="far fa-save"></i> Save</a>
+    </div>
+  </div>
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-6">
+      <p class="demo-heading">Font Families</p>
+      <ul class="demo-fonts">
+        <li class="font-sans-serif">Font Sans-Serif</li>
+        <li class="font-serif">Font Serif</li>
+        <li class="font-monospace">Font Monospace</li>
+      </ul>
+      <p class="demo-heading">Theme Colors</p>
+      <ul class="demo-colors">
+        <li class="color-primary-light">$color-primary-light</li>
+        <li class="color-primary">$color-primary</li>
+        <li class="color-primary-dark">$color-primary-dark</li>
+      </ul>
+      <ul class="demo-colors">
+        <li class="color-secondary-light">$color-secondary-light</li>
+        <li class="color-secondary">$color-secondary</li>
+        <li class="color-secondary-dark">$color-secondary-dark</li>
+      </ul>
+      <ul class="demo-colors">
+        <li class="color-tertiary-light">$color-tertiary-light</li>
+        <li class="color-tertiary">$color-tertiary</li>
+        <li class="color-tertiary-dark">$color-tertiary-dark</li>
+      </ul>
+    </div>
+    <div class="cell medium-6">
+      <p class="demo-heading">Theme Colors (cont.)</p>
+      <ul class="demo-colors">
+        <li class="color-gray-light">$color-gray-light</li>
+        <li class="color-gray">$color-gray</li>
+        <li class="color-gray-dark">$color-gray-dark</li>
+      </ul>
+      <ul class="demo-colors">
+        <li class="color-success-light">$color-success-light</li>
+        <li class="color-success">$color-success</li>
+        <li class="color-success-dark">$color-success-dark</li>
+      </ul>
+      <ul class="demo-colors">
+        <li class="color-warning-light">$color-warning-light</li>
+        <li class="color-warning">$color-warning</li>
+        <li class="color-warning-dark">$color-warning-dark</li>
+      </ul>
+      <ul class="demo-colors">
+        <li class="color-alert-light">$color-alert-light</li>
+        <li class="color-alert">$color-alert</li>
+        <li class="color-alert-dark">$color-alert-dark</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-6">
+      <p class="demo-heading">Default Native Headings:</p>
+      <h1>h1. Heading One</h1>
+      <h2>h2. Heading Two</h2>
+      <h3>h3. Heading Three</h3>
+      <h4>h4. Heading Four</h4>
+      <h5>h5. Heading Five</h5>
+      <h6>h6. Heading Six</h6>
+    </div>
+    <div class="cell medium-6">
+      <p class="demo-heading">Foundation Labels</p>
+      <ul>
+        <li><span class="primary label">Primary Label</span></li>
+        <li><span class="secondary label">Secondary Label</span></li>
+        <li><span class="success label">Success Label</span></li>
+        <li><span class="warning label">Warning Label</span></li>
+        <li><span class="alert label">Alert Label</span></li>
+      </ul>
+
+      <p class="demo-heading">Foundation Modal Demo</p>
+      <p><button class="button" data-open="exampleModal1">Click me for a modal</button></p>
+    </div>
+  </div>
+
+  <p><a href="./index.html"><i class="fas fa-chevron-left"></i> Return to index.html</a></p>
+</div>
+
+<div class="reveal" id="exampleModal1" data-reveal>
+  <h1>Example Reveal Modal</h1>
+  <p>A quick demo and test to ensure javascript working.</p>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<script src="./assets/js/app.js"></script>
+</body>
+</html>

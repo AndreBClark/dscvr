@@ -1,0 +1,17 @@
+
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
+}
+
+@function font-url($url) {
+	@return url('../fonts/' + $url);
+}
+
+@function image-url($url) {
+	@return url('../images/' + $url);
+}
+
+$slick-arrow-color: black !default;

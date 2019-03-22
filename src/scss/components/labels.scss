@@ -1,0 +1,19 @@
+
+.label {
+    &.primary {
+        background: $color-primary;
+    }
+    &.secondary {
+        background: $color-gray;
+    }
+    &.success {
+        background: $color-success;
+        color: #fff;
+    }
+    &.warning {
+        background: $color-warning;
+    }
+    &.alert {
+        background: $color-alert;
+    }
+}
