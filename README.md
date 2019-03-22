@@ -26,8 +26,8 @@
 
 _once your editor of choice is open you are ready to work on the project._
 
-## Theme demo
-Once you've followed the Steps, Check to see verify if it worked go **[View the Demo](demo.html)** The result should look very colorful and styled.
+### 5. Verify Functionality
+Once you've followed the Steps, verify if it worked by **[Viewing the Demo](demo.html)** The result should look colorful and obviously styled.
 
 **Note:** _if either this page or the demo page look un-styled. that means you have not run your build yet or there is an issue preventing the build_
 
