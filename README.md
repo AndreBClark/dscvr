@@ -42,13 +42,19 @@ Once you've followed the Steps, verify if it worked by **[Viewing the Demo](demo
 
 ### 7. Checking Out Branches
 
-The `origin/master` branch is the main production branch. with this project we will divide up work as Individual _Features_ or _Tasks_ There Are a few things you need to do, before you begin working on a feature. from this point on Everyone else needs to be working on the Dev Branch.
+The `origin/master` branch is the main production branch. most of the work will be pushed on the `origin/dev` branch during development.  from the dev branch we will divide up work as Individual _Features_ or _Tasks_. these issues/features will be worked on their own feature branches.
 
-1. Check the project board for tasks to complete, place your chosen task in the `in progress` stack.
+1. Check the issues tab for tasks to complete, assign yourself to the task you intend to work on
 1. move to the dev branch from Github Desktop or from your code editor
-1. If Your Feature doesn't have a branch yet create one. You can do so in the Github Desktop Application.
+1. If Your Feature doesn't have a branch yet create one. Yo can do so in the Github Desktop Application.
+1. feature branches should be called `feature/_yourfeature_`
 1. switch to your code editor and in the lower corner there should be a line that says the name of the current branch.
 1. If it's correct, you're all set.
+
+### 8. Completing Features
+
+once you've completed work on an issue within a feature branch make a pull request and submit your work for code review, and the reviewer will review the changes and approve the merge. I will add more details once we've test run this a bit more.
+
 
 ## Resources
 
