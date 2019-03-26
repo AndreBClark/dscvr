@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const imagemin = require('imagemin');
+const imageminJpegtran = require('imagemin-jpegtran');
+const imageminPngquant = require('imagemin-pngquant');
 
 module.exports = {
  	mode: 'development',
@@ -55,9 +58,50 @@ module.exports = {
                     }
                 }]
             },
+		// 	{
+		// 		test: /\.(gif|png|jpe?g|svg)$/i,
+		// 		use: [
+		// 			'file-loader',
+		// 			{
+		// 				options: {
+		// 					name: '[name].[ext]',
+		// 					outputPath: 'img',
+		// 					publicPath: '../img'
+		// 				},
+		// 				loader: 'image-webpack-loader',
+		// 				options: {
+		// 					mozjpeg: {
+		// 						progressive: true,
+		// 						quality: 65
+		// 					},
+		// 					// optipng.enabled: false will disable optipng
+		// 					optipng: {
+		// 						enabled: false,
+		// 					},
+		// 					pngquant: {
+		// 						quality: '65-90',
+		// 						speed: 4
+		// 					},
+		// 					gifsicle: {
+		// 						interlaced: false,
+		// 					},
+		// 					// the webp option will enable WEBP
+		// 					webp: {
+		// 						quality: 75
+		// 					}
+		// 				}
+		// 			},
+		// 		],
+		// 	}]
+		// },
             {
-                test: /\.(png|jpg|gif)$/,
-                loader: 'url-loader'
+                test: /\.(png|svg|jpg|gif)$/,
+                loader: 'file-loader',
+				options: {
+					name: '[name][hash].[ext]',
+					outputPath: 'img',
+					publicPath: '../img'
+				}
             }
         ]
     },
