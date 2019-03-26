@@ -17,6 +17,8 @@
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",
+    "image-webpack-loader": "^4.6.0",
+    "imagemin-jpegtran": "^6.0.0",
     "import-glob-loader": "*",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "*",
