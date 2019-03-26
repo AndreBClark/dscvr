@@ -10,7 +10,7 @@ import 'foundation-sites/dist/css/foundation.css';
 // import 'featherlight-webpack/src/featherlight.css';
 // import 'featherlight-webpack/src/featherlight.gallery.css';
 import '../scss/project.scss';
-import '../img/joe_800.png'
+import '../img/joe_800.png';
 
 /* ---- Global Javascript Imports ----- */
 

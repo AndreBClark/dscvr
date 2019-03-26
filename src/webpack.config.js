@@ -3,9 +3,13 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const imagemin = require('imagemin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+
 
 module.exports = {
  	mode: 'development',
@@ -58,47 +62,11 @@ module.exports = {
                     }
                 }]
             },
-		// 	{
-		// 		test: /\.(gif|png|jpe?g|svg)$/i,
-		// 		use: [
-		// 			'file-loader',
-		// 			{
-		// 				options: {
-		// 					name: '[name].[ext]',
-		// 					outputPath: 'img',
-		// 					publicPath: '../img'
-		// 				},
-		// 				loader: 'image-webpack-loader',
-		// 				options: {
-		// 					mozjpeg: {
-		// 						progressive: true,
-		// 						quality: 65
-		// 					},
-		// 					// optipng.enabled: false will disable optipng
-		// 					optipng: {
-		// 						enabled: false,
-		// 					},
-		// 					pngquant: {
-		// 						quality: '65-90',
-		// 						speed: 4
-		// 					},
-		// 					gifsicle: {
-		// 						interlaced: false,
-		// 					},
-		// 					// the webp option will enable WEBP
-		// 					webp: {
-		// 						quality: 75
-		// 					}
-		// 				}
-		// 			},
-		// 		],
-		// 	}]
-		// },
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'file-loader',
 				options: {
-					name: '[name][hash].[ext]',
+					name: '[name].[ext]',
 					outputPath: 'img',
 					publicPath: '../img'
 				}
@@ -108,7 +76,15 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
-        })
+        }),
+		new CopyWebpackPlugin([{
+  			from: 'img/**/**',
+  			to: path.resolve(__dirname, '../assets')
+		}]),
+		new ImageminPlugin({
+		pngquant: ({quality: 60-80}),
+  		plugins: [imageminMozjpeg({quality: 50})]
+		})
     ],
 
     optimization: {
