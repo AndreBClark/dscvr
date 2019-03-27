@@ -33,7 +33,8 @@
     "uglifyjs-webpack-plugin": "^2.1.1",
     "url-loader": "*",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-merge": "^4.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
