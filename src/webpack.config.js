@@ -9,7 +9,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminMozjpeg = require('imagemin-mozjpeg');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
  	mode: 'development',
@@ -77,6 +77,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
         }),
+		new HtmlWebpackPlugin(),
 		new CopyWebpackPlugin([{
   			from: 'img/**/**',
   			to: path.resolve(__dirname, '../assets')
