@@ -22,8 +22,10 @@
 1. Clone Repository
 1. Open CLI at ``dscvr/src/`` or using Github ``cmd + ` `` then ``cd src``
  1. enter ``npm install``
- 1. enter``npm run build --watch``
+ 1. enter``npm run build``
 1. Using Github ``cmd + shift + A`` ``Repository>Open in Editor Name``
+
+**note:** `--watch` is no longer required as it is now integrated in the `build` script
 
 _once your editor of choice is open you are ready to work on the project._
 
