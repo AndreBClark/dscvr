@@ -7,6 +7,7 @@ robots.txt
 .hg_archival.txt
 assets/css/app.css
 assets/js/app.js
+assets/*
 site_media/media
 site_media/static
 local_settings.py
@@ -77,4 +78,3 @@ assets/js/app.min.js
 # magento
 var/session/
 var/report/
-
