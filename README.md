@@ -37,9 +37,8 @@ Once you've followed the Steps, verify if it worked by **[Viewing the Demo](demo
 1. Open github Desktop and open terminal
 1. In terminal Enter `cd src` to move to development folder
 1. enter `npm run build`
- **Note:** `--watch` is no longer required as it is now integrated into the build script
+ -**Note** `--watch` is no longer required as it is now integrated into the build script
 1. leave the terminal open while working
-1.  `--watch` will auto update your changes to you the assets folder locally
 
 ### 7. Checking Out Branches
 
