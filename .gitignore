@@ -8,6 +8,7 @@ robots.txt
 assets/css/app.css
 assets/js/app.js
 assets/*
+dist/*
 site_media/media
 site_media/static
 local_settings.py

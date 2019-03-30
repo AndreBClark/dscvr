@@ -10,7 +10,6 @@ import 'foundation-sites/dist/css/foundation.css';
 // import 'featherlight-webpack/src/featherlight.css';
 // import 'featherlight-webpack/src/featherlight.gallery.css';
 import '../scss/project.scss';
-
 /* ---- Global Javascript Imports ----- */
 
 // import 'script-loader!jquery/dist/jquery.min';

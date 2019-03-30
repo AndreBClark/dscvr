@@ -10,85 +10,100 @@ const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-// const merge = require('webpack-merge');
-// const common = require('./webpack.common.js');
 
-module.exports = merge(common, {
+module.exports = {
 	mode: 'production',
-	entry: {
-		"app": "./js/_entry.js",
-		// "app.min": "./js/_entry.js",  // no need for second min file when using production build
-	},
-	output: {
-		path: path.resolve(__dirname, '../assets'),
-		filename: 'js/[name].js',
-		publicPath: '/'
-	},
-	module: {
-		rules: [
+    entry: {
+        "app": "./js/_entry.js",
+        // "app.min": "./js/_entry.js",  // no need for second min file when using production build
+    },
+    output: {
+        path: path.resolve(__dirname, '../dist'),
+        filename: 'js/[name].js',
+        publicPath: '/'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['@babel/preset-env']
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader"
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader?-url",
+                    "sass-loader",
+                    'import-glob-loader',
+                ],
+            },
 			{
-				test: /\.js/,
+				test:/\.html$/,
 				use: [
 					{
-						loader: 'babel-loader',
+						loader: 'html-loader',
 						options: {
-							presets: ['@babel/preset-env']
+							name: '[name].[ext]',
+							from: '/',
+							outputPath: '/'
 						}
 					}
-				]
-			},
-			{
-				test: /\.css$/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					"css-loader"
-				]
-			},
-			{
-				test: /\.scss$/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					"css-loader?-url",
-					"sass-loader",
-					'import-glob-loader',
 				],
+				exclude: path.resolve(__dirname, 'src/index.html')
 			},
-			{
-				test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						name: '[name].[ext]',
-						outputPath: 'fonts',    // where the fonts will go
-						publicPath: '../fonts'  // override the default path
-					}
-				}]
-			},
-			{
-				test: /\.(png|svg|jpg|gif)$/,
-				loader: 'file-loader',
+            {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts',    // where the fonts will go
+                        publicPath: '../fonts'  // override the default path
+                    }
+                }]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                loader: 'file-loader',
 				options: {
 					name: '[name].[ext]',
 					outputPath: 'img',
 					publicPath: '../img'
 				}
-			}
-		]
-	},
+            }
+        ]
+    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
         }),
-		new HtmlWebpackPlugin(),
+		// new HtmlWebpackPlugin(),
+
 		new CopyWebpackPlugin([{
   			from: 'img/**/**',
-  			to: path.resolve(__dirname, '../assets')
+  			to: path.resolve(__dirname, '../dist')
 		}]),
 		new ImageminPlugin({
-		pngquant: ({quality: 60-80}),
-  		plugins: [imageminMozjpeg({quality: 50})]
-		})
+		pngquant: ({quality: 60-100}),
+  		plugins: [imageminMozjpeg({quality: 75})]
+	}),
+		new CleanWebpackPlugin()
     ],
 
     optimization: {
