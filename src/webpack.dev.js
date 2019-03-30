@@ -3,15 +3,14 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const imagemin = require('imagemin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const imageminJpegtran = require('imagemin-jpegtran');
-const imageminPngquant = require('imagemin-pngquant');
-const imageminMozjpeg = require('imagemin-mozjpeg');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+ 	mode: 'development',
+	devtool: 'inline-source-map',
+	devServer: {
+	contentBase: './assets'
+},
     entry: {
         "app": "./js/_entry.js",
         // "app.min": "./js/_entry.js",  // no need for second min file when using production build
@@ -50,6 +49,18 @@ module.exports = {
                     'import-glob-loader',
                 ],
             },
+			{
+				test:/\.html$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]'
+						}
+					}
+				],
+				exclude: path.resolve(__dirname, 'src/index.html')
+			},
             {
                 test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: [{
@@ -76,15 +87,19 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
         }),
-		new HtmlWebpackPlugin(),
-		new CopyWebpackPlugin([{
-  			from: 'img/**/**',
-  			to: path.resolve(__dirname, '../assets')
-		}]),
-		new ImageminPlugin({
-		pngquant: ({quality: 60-80}),
-  		plugins: [imageminMozjpeg({quality: 50})]
-		})
+		new HtmlWebpackPlugin(
+			{
+			filename: 'index.html',
+			template: 'src/index.html'
+		}),
+		// new CopyWebpackPlugin([{
+  		// 	from: 'img/**/**',
+  		// 	to: path.resolve(__dirname, '../assets')
+		// }]),
+		// new ImageminPlugin({
+		// pngquant: ({quality: 60-80}),
+  		// plugins: [imageminMozjpeg({quality: 50})]
+		// })
     ],
 
     optimization: {
