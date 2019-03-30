@@ -59,7 +59,7 @@ module.exports = {
 						}
 					}
 				],
-				exclude: path.resolve(__dirname, 'src/index.html')
+				exclude: path.resolve(__dirname, 'index.html')
 			},
             {
                 test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -89,8 +89,8 @@ module.exports = {
         }),
 		new HtmlWebpackPlugin(
 			{
-			filename: 'index.html',
-			template: 'src/index.html'
+			filename: 'char.html',
+			template: 'index.html'
 		}),
 		// new CopyWebpackPlugin([{
   		// 	from: 'img/**/**',
