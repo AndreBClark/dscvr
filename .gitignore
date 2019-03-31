@@ -5,9 +5,9 @@ robots.txt
 *.pyc
 *.db
 .hg_archival.txt
-assets/css/app.css
-assets/js/app.js
-assets/*
+dist/css/app.css
+dist/js/app.js
+dist/*
 site_media/media
 site_media/static
 local_settings.py

@@ -9,14 +9,14 @@ module.exports = {
  	mode: 'development',
 	devtool: 'inline-source-map',
 	devServer: {
-	contentBase: './assets'
+	contentBase: './dist'
 },
     entry: {
         "app": "./js/_entry.js",
         // "app.min": "./js/_entry.js",  // no need for second min file when using production build
     },
     output: {
-        path: path.resolve(__dirname, '../assets'),
+        path: path.resolve(__dirname, '../dist'),
         filename: 'js/[name].js',
         publicPath: '/'
     },

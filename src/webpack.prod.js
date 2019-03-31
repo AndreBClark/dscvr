@@ -14,14 +14,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const merge = require('webpack-merge');
 // const common = require('./webpack.common.js');
 
-module.exports = merge(common, {
+module.exports = {
 	mode: 'production',
 	entry: {
 		"app": "./js/_entry.js",
 		// "app.min": "./js/_entry.js",  // no need for second min file when using production build
 	},
 	output: {
-		path: path.resolve(__dirname, '../assets'),
+		path: path.resolve(__dirname, '../dist'),
 		filename: 'js/[name].js',
 		publicPath: '/'
 	},
@@ -83,7 +83,7 @@ module.exports = merge(common, {
 		new HtmlWebpackPlugin(),
 		new CopyWebpackPlugin([{
   			from: 'img/**/**',
-  			to: path.resolve(__dirname, '../assets')
+  			to: path.resolve(__dirname, '../dist')
 		}]),
 		new ImageminPlugin({
 		pngquant: ({quality: 60-80}),
