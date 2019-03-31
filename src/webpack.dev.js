@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
-	devtool: 'source-map',
+	devtool: 'inline-source-map',
 	devServer: {
 contentBase: '../'
 },
@@ -62,7 +62,6 @@ contentBase: '../'
 						}
 					}
 				],
-				exclude: path.resolve(__dirname, 'src/index.html')
 			},
             {
                 test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -100,7 +99,7 @@ contentBase: '../'
 		// pngquant: ({quality: 60-80}),
   		// plugins: [imageminMozjpeg({quality: 50})]
 		// })
-		new CleanWebpackPlugin()
+
     ],
 
     optimization: {
