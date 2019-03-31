@@ -5,8 +5,14 @@ robots.txt
 *.pyc
 *.db
 .hg_archival.txt
+<<<<<<< HEAD
 dist/css/app.css
 dist/js/app.js
+=======
+assets/css/app.css
+assets/js/app.js
+assets/*
+>>>>>>> 6776c80fe6dbe885f0b4f3799e1405b6ea42a2ea
 dist/*
 site_media/media
 site_media/static

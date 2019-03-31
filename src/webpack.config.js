@@ -10,6 +10,7 @@ const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugins');
 
 module.exports = {
     entry: {
@@ -84,7 +85,13 @@ module.exports = {
 		new ImageminPlugin({
 		pngquant: ({quality: 60-80}),
   		plugins: [imageminMozjpeg({quality: 50})]
-		})
+	}),
+		new CleanWebpackPlugin(
+			{
+			cleanStaleWebpackAssets: true,
+		}
+		),
+
     ],
 
     optimization: {
