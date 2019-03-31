@@ -50,6 +50,6 @@
     "build:prod": "webpack --config webpack.prod.js",
     "build:prod-old": "webpack -p --mode=production"
   },
-  "author": "",
+  "author": "abclark@cosmicdivision.design",
   "license": "ISC"
 }
