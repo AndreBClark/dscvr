@@ -71,6 +71,7 @@ Here is A list of links and Resources for learning more web design stuff. full l
 
 ## CSS
 * **[BEM](http://getbem.com/)** Block Element Modifier class naming system
+    * [CSS Naming Conventions](https://medium.freecodecamp.org/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849) includes an easy to understand explanation of BEM
 * **[Organizing CSS](https://www.youtube.com/watch?v=IKFq2cSbQ4Q)** Video (37:54)
 * **[Layout Land](https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag)** Youtube Channel covering CSS Grid and Flexbox
 
