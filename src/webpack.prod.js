@@ -10,15 +10,17 @@ const imageminJpegtran = require('imagemin-jpegtran');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugins');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 
 module.exports = {
+	mode: 'production',
     entry: {
         "app": "./js/_entry.js",
         // "app.min": "./js/_entry.js",  // no need for second min file when using production build
     },
     output: {
-        path: path.resolve(__dirname, '../assets'),
+        path: path.resolve(__dirname, '../dist'),
         filename: 'js/[name].js',
         publicPath: '/'
     },
@@ -51,6 +53,20 @@ module.exports = {
                     'import-glob-loader',
                 ],
             },
+			{
+				test:/\.html$/,
+				use: [
+					{
+						loader: 'html-loader',
+						options: {
+							name: '[name].[ext]',
+							from: '/',
+							outputPath: '/'
+						}
+					}
+				],
+				exclude: path.resolve(__dirname, 'src/index.html')
+			},
             {
                 test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: [{
@@ -77,21 +93,17 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
         }),
-		new HtmlWebpackPlugin(),
+		// new HtmlWebpackPlugin(),
+
 		new CopyWebpackPlugin([{
   			from: 'img/**/**',
-  			to: path.resolve(__dirname, '../assets')
+  			to: path.resolve(__dirname, '../dist')
 		}]),
 		new ImageminPlugin({
-		pngquant: ({quality: 60-80}),
-  		plugins: [imageminMozjpeg({quality: 50})]
+		pngquant: ({quality: 60-100}),
+  		plugins: [imageminMozjpeg({quality: 75})]
 	}),
-		new CleanWebpackPlugin(
-			{
-			cleanStaleWebpackAssets: true,
-		}
-		),
-
+		new CleanWebpackPlugin()
     ],
 
     optimization: {
