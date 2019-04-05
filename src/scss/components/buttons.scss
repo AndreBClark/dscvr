@@ -1,9 +1,13 @@
 
 .button {
-    background: $color-primary;
+    background: $color-primary-dark;
+    width: 200px;
+    height: 40px;
+    text-align: center;
     &:focus,
     &:hover {
         background: darken($color-primary, 10%);
+
     }
     &.secondary {
         background: $color-gray;
