@@ -1,13 +1,15 @@
 
 .button {
-    background: $color-primary-dark;
+    background: #fff;
+    color: #000;
+    border: black solid 3px;
     width: 200px;
     height: 40px;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     &:focus,
     &:hover {
-        background: darken($color-primary, 10%);
+        color: #f697a2;
 
     }
     &--skew {
