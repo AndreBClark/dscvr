@@ -4,16 +4,25 @@
     width: 200px;
     height: 40px;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     &:focus,
     &:hover {
         background: darken($color-primary, 10%);
 
     }
-    &.secondary {
-        background: $color-gray;
+    &--skew {
+      transform: skew(20deg);
+    }
+    &--inverseskew {
+      transform: skew(-20deg);
+    }
+    &--secondary {
+        background:$color-secondary;
+        color: #000;
         &:focus,
         &:hover {
-            background: darken($color-gray, 10%);
+            background: darken($color-secondary-dark, 10%);
+            color: #000;
         }
     }
     &.success {
