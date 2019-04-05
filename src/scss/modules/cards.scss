@@ -1,4 +1,9 @@
 .card-module {
+    
+    flex-basis: 400px;
+    padding: 3em;
+    margin: 3em;
+
     &__description {
         &--green-txt {
             color: green;
