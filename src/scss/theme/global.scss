@@ -8,6 +8,10 @@ body {
     font-family: $font-sans-serif;
 }
 
+section, main {
+	display: flex;
+}
+
 // a {
 //     color: $color-primary-dark;
 //     &:focus,
