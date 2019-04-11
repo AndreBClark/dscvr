@@ -12,13 +12,13 @@ section, main {
 	display: flex;
 }
 
-a {
-    color: $color-primary-dark;
-    &:focus,
-    &:hover {
-        color: $color-primary;
-    }
-}
+// a {
+//     color: $color-primary-dark;
+//     &:focus,
+//     &:hover {
+//         color: $color-primary;
+//     }
+// }
 
 h1 {
     font-size: 24px;

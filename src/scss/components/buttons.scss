@@ -1,17 +1,54 @@
 
 .button {
-    background: $color-primary;
+    background:#f697a2 ;
+    color: #000;
+    border: #000 solid 3px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
     &:focus,
     &:hover {
-        background: darken($color-primary, 10%);
+        color: #fff;
+        background: $color-tertiary-dark;
+        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     }
-    &.secondary {
-        background: $color-gray;
-        &:focus,
-        &:hover {
-            background: darken($color-gray, 10%);
-        }
+
+    &--ver2 {
+      &:hover {
+        color: #000;
     }
+  }
+    &--skew {
+      transform: skew(20deg);
+    }
+    &--inverseskew {
+      transform: skew(-20deg);
+    }
+
+    &__nocolor {
+      background: #fff;
+      &:focus,
+      &:hover {
+          color: #000;
+          background: $color-tertiary-dark;
+
+      }
+
+      }
+
+      &__nocolor--yellow {
+          background: #fff;
+          &:focus,
+          &:hover {
+              color: #000;
+              background: $color-secondary-dark;
+
+          }
+
+          }
+
+
     &.success {
         background: $color-success;
         color: #fff;
