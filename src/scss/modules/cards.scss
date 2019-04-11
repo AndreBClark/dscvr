@@ -3,11 +3,15 @@
     flex-basis: 400px;
     padding: 3em;
     margin: 3em;
+    
+  
+    
+    
 
 
     &--yellow {
         background: $color-secondary;
-        
+
     }
 
 
@@ -17,6 +21,10 @@
       
     }
 
+    &--blue {
+        background-color: $color-primary;
+        
+    }
 
 }
 
