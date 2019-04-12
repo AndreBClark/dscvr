@@ -6,9 +6,11 @@ body {
     font-size: 16px;
     font-family: $font-sans-serif;
 }
-
-section, main {
-	display: flex;
+@media only screen and (min-width: 769px) {
+	section, main {
+		display: flex;
+		flex-wrap:wrap;
+	}
 }
 
 // a {
