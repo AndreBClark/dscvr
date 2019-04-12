@@ -5,7 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>North Idaho College Student Portfolio Show</title>
 	<link rel="stylesheet" href="dist/css/app.css">
+
+  <style>
+
+body {
+  background: #fff;
+}
+
+  </style>
+
 </head>
+
 
 <body>
 
@@ -17,14 +27,48 @@
 
 <nav>
 </nav>
+<!-- MOBILE HERO IMAGE SLIDER BEGINS -->
+<div class="hero-image__mobile-slider"
+  <img class="hero-image__mobile" src="src/img/mobile-hero/web.png" alt="Illustration of the web team." />
+  <img class="hero-image__mobile" src="src/img/mobile-hero/illustration.png" alt="Illustration of the illustration team." />
+  <img class="hero-image__mobile" src="src/img/mobile-hero/branding.png" alt="Illustration of the branding team." />
+  <img class="hero-image__mobile" src="src/img/mobile-hero/print.png" alt="Illustration of the print team." />
+  <img class="hero-image__mobile" src="src/img/mobile-hero/socialmedia.png" alt="Illustration of thes social media team." />
+</div>
+<!-- MOBILE HERO IMAGE SLIDER ENDS -->
 
-  <img src="/img/mobile-hero/web.png" alt="Illustration of the web team." />
-  <img src="/img/mobile-hero/illustration.png" alt="Illustration of the illustration team." />
-  <img src="/img/mobile-hero/branding.png" alt="Illustration of the branding team." />
-  <img src="/img/mobile-hero/print.png" alt="Illustration of the print team." />
-  <img src="/img/mobile-hero/socialmedia.png" alt="Illustration of thes social media team." />
+<!-- MOBILE CTA BEGINS -->
 
 
+<!-- MOBILE CTA ENDS -->
+
+<script>
+
+
+	function init() {
+// Start Mobile Hero Image Slider
+     var imageTotal = 0;
+     imageSlider();
+
+     function imageSlider() {
+       var images = document.getElementsByClassName("hero-image__mobile");
+       for (var i = 0; i < images.length; i++) {
+         images[i].style.display = "none";
+       }
+      imageTotal++;
+      if (imageTotal > images.length) { imageTotal = 1
+      }
+      images[imageTotal - 1].style.display = "block";
+      setTimeout (imageSlider, 2000);
+     }
+// End Mobile Hero Image Slider
+
+
+  };
+
+  window.onload = init;
+
+</script>
 
 </body>
 </html>
