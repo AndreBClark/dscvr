@@ -1,0 +1,36 @@
+.nav__mobile {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+
+&--home {
+  background:$color-primary;
+  height: 30vh;
+  width: 150%;
+  margin-left: -71px;
+  transform:skew(79deg, -17deg);
+  transform:rotate(35deg);
+}
+
+&--portfolio {
+  background:$color-tertiary;
+  height: 30vh;
+  width: 150%;
+  margin-left: -71px;
+  transform:skew(79deg, -17deg);
+  transform:rotate(35deg);
+}
+
+&--guestbook {
+background: $color-secondary;
+height: 30vh;
+width: 150%;
+margin-left: -71px;
+transform:skew(79deg, -17deg);
+transform:rotate(35deg);
+
+}
+
+
+}
