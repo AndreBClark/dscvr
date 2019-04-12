@@ -4,7 +4,7 @@
 
 // import 'jquery-ui-dist/jquery-ui.min.css';
 import 'foundation-sites/dist/css/foundation.css';
-// import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 // import 'slick-carousel/slick/slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
 // import 'featherlight-webpack/src/featherlight.css';
