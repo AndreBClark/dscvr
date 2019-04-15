@@ -15,6 +15,20 @@ ul {
 
 .footer .a .hover {
     color: black;
+a {
+    color: $color-gray-dark;
+    &:focus,
+    &:hover {
+        color: $color-gray-light;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+form {
 
 }
 
