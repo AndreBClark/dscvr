@@ -13,13 +13,7 @@ body {
 	}
 }
 
-a {
-    color: $color-primary-dark;
-    &:focus,
-    &:hover {
-        color: $color-primary;
-    }
-}
+
 
 h1 {
     font-size: 24px;
