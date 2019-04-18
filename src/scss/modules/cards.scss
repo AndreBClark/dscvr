@@ -1,0 +1,24 @@
+.card-module {
+    
+    flex-basis: 400px;
+    padding: 3em;
+    margin: 3em;
+
+
+    &--yellow {
+        background: $color-secondary;
+        
+    }
+
+
+    &--pink {
+        background: $color-tertiary;
+        
+      
+    }
+
+
+}
+
+
+
