@@ -12,7 +12,7 @@
 
     &--yellow {
         background: $color-secondary;
-
+   
     }
 
 
@@ -29,5 +29,8 @@
 
 }
 
-
+.card-module img {
+    
+    background: $color-secondary;
+}
 
