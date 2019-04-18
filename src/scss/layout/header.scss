@@ -3,4 +3,24 @@
 	font-size: calc(1em + 1vw);
 	text-align: center;
 	padding
+	&__list{
+		width: 95vw;
+		max-width: 40em;
+		margin: 1em auto;
+
+	}
+	&__item {
+		display: inline;
+		list-style: none;
+	}
+	& a {
+		text-decoration: none;
+		color: $color-dark;
+		font-weight: 700;
+	}
+}
+
+.nav-desktop{
+	position: sticky;
+	box-shadow: 5px 5px 5px #ccc;
 }
