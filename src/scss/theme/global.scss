@@ -4,7 +4,6 @@ body {
     background: #eee;
     color: $color-gray-dark;
     font-size: 16px;
-    padding: 30px;
     font-family: $font-sans-serif;
 }
 @media only screen and (min-width: 769px) {
@@ -14,13 +13,13 @@ body {
 	}
 }
 
-a {
-    color: $color-primary-dark;
-    &:focus,
-    &:hover {
-        color: $color-primary;
-    }
-}
+// a {
+//     color: $color-primary-dark;
+//     &:focus,
+//     &:hover {
+//         color: $color-primary;
+//     }
+// }
 
 h1 {
     font-size: 24px;
