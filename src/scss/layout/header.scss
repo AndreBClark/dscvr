@@ -1,26 +1,82 @@
 .nav-desktop {
+	display: none;
+}
+@media only screen and (min-width: 960px) {
 
-	font-size: calc(1em + 1vw);
-	text-align: center;
-	padding
-	&__list{
-		width: 95vw;
-		max-width: 40em;
-		margin: 1em auto;
+.nav-desktop {
+  display: block;
+  position   : sticky;
+  box-shadow : 5px 5px 5px #ccc;
+  text-align : center;
+  font-size  : calc(1em + 1vw);
+  transition : .4s all;
 
-	}
-	&__item {
-		display: inline;
-		list-style: none;
-	}
-	& a {
-		text-decoration: none;
-		color: $color-dark;
-		font-weight: 700;
-	}
+  // &__list {
+  //   width     : 95vw;
+  //   max-width : 40em;
+  //   margin    : 1em auto;
+  // }
+
+  &__item {
+    display    : inline;
+    list-style : none;
+  }
+
+  &__link {
+    padding         : 0 1em;
+    color           : $color-dark;
+    text-decoration : none;
+    font-weight     : 700;
+    transition      : .5s color;
+    // &--primary:hover {
+    // color : $color-primary;
+    //
+  }
 }
 
-.nav-desktop{
-	position: sticky;
-	box-shadow: 5px 5px 5px #ccc;
+.nav-link {
+  display         : inline-block;
+  position        : relative;
+  padding         : 0 1em;
+  color           : $color-dark;
+  text-decoration : none;
+  text-decoration : none;
+  text-transform  : uppercase;
+  font-weight     : 700;
+  letter-spacing  : 0.15em;
+  transition      : .5s color;
+
+  &:hover {
+    color : $color-dark;
+  }
+
+  &:after {
+    content    : "";
+    display    : block;
+    position   : absolute;
+    bottom     : 0;
+    left       : 0;
+    width      : 0;
+    height     : .25em;
+    background : none repeat scroll 0 0 transparent;
+    transition : width 0.3s ease 0s;
+  }
+
+  &--primary:after {
+    background : $color-primary;
+  }
+
+  &--secondary:after {
+    background : $color-secondary;
+  }
+
+  &--tertiary:after {
+    background : $color-tertiary;
+  }
+
+  &:hover:after, &:active:after {
+    left  : 0;
+    width : 100%;
+  }
+}
 }
