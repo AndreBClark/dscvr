@@ -1,9 +1,12 @@
 .card-module {
     
+  
     flex-basis: 400px;
     padding: 3em;
     margin: 3em;
     flex: 1 400px;
+    
+    
     // max-width: 400px;;
   
     
@@ -31,6 +34,9 @@
 
 .card-module img {
     
-    background: $color-secondary;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 3em;
 }
-
