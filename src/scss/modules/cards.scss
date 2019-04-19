@@ -3,6 +3,13 @@
     margin: 1em;
     flex: 1 400px;
 
+	& img {
+	    display: flex;
+	    justify-content: center;
+	    max-width: 300px;
+	    max-height: 300px;
+	    margin: 2em;
+	}
 
     &--yellow {
         background: $color-secondary;
@@ -17,12 +24,4 @@
         background-color: $color-primary;
     }
 
-}
-.card-module img {
-    
-    display: flex;
-    justify-content: center;
-    max-width: 300px;
-    max-height: 300px;
-    margin: 3em;
 }
