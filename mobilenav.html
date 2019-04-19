@@ -10,23 +10,33 @@
 </style>
 
 
-<javascript>
+<script>
 
 function init() {
+var menuDropdownList = document.getElementById('mobile-menu');
+menuDropdownList.style.display ='none';
+// var menuDropdownList = document.getElementById('mobile-menu');
+var hamburgerMenu = document.getElementsByTagName('i');
+hamburgerMenu.onclick = showMenu;
 
-function showDropdownlist {
 
-
-
+function showMenu() {
+var menuDropdownList = document.getElementById('mobile-menu');
+  if (menuDropdownList.style.display ==='block') {
+menuDropdownList.style.display = 'none';
+}
+else {
+  menuDropdownList.style.display = 'block';
+}
 
 }
-showDropdownlist();
 
-}
+};
+
 
 window.onload = init;
 
-</javascript>
+</script>
 
 </head>
 
@@ -42,10 +52,10 @@ window.onload = init;
  <div class="nav__mobile--logoandham"><span class="nav__mobile--logo"><img src="src/img/dscvr_retro.png" alt="DSCVR Logo" /></span>
    <span><i class="fas fa-bars fa-2x nav__mobile--hamburger"></i></span>
  </div>
- <ul>
-<li class="nav__mobile--dropdownlist"> <a href""> Home</a></li>
- <li class="nav__mobile--dropdownlist"><a href"">Student Portfolios</a></li>
-<li class="nav__mobile--dropdownlist"><a href"">Guestbook</a></li>
+ <ul id="mobile-menu">
+<li class="nav__mobile--dropdownlist-item"> <a href""> Home</a></li>
+ <li class="nav__mobile--dropdownlist-item"><a href"">Student Portfolios</a></li>
+<li class="nav__mobile--dropdownlist-item"><a href"">Guestbook</a></li>
 </ul>
 </nav>
 

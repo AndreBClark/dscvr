@@ -3,6 +3,10 @@ h1 {
   display: none;
 }
 
+// #mobile-menu {
+//   display: none;
+// }
+
 .nav__mobile {
   display: flex;
   flex-direction: column;
@@ -23,7 +27,7 @@ color: #000;
 padding-right: 50px;
 }
 
-&--dropdownlist {
+&--dropdownlist-item {
   display: flex;
   justify-content: center;
   align-items: center;
