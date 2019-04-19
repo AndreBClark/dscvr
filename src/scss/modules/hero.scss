@@ -1,9 +1,31 @@
-.hero-image__mobile {
+.hero-image__card {
 text-align: center;
 margin: auto;
 }
 
-.hero-image__mobile h1 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.hero-image__card h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-image__desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 642px) {
+  .hero-image__mobile {
+    display: none;
+  }
+
+  .hero-image__desktop {
+    display: block;
+  }
+
+  .hero-image__card h1 {
+    font-size: calc(1em + 2vw);
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+
 }
