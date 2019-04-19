@@ -3,9 +3,21 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 3em;
+}
+
+.section_thanks{
+  text-align: center;
+}
+
+.section_socials{
+  text-align: center;
+}
+
+.section_subscribe{
+  text-align: center;
 }
 
 ul {
