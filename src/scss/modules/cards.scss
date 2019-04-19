@@ -1,36 +1,23 @@
 .card-module {
-
-
     padding: 2em;
     margin: 1em;
     flex: 1 400px;
-    
-    
-    // max-width: 400px;;
-  
-    
-    
 
 
     &--yellow {
         background: $color-secondary;
-   
     }
 
 
     &--pink {
         background: $color-tertiary;
-        
-      
     }
 
     &--blue {
         background-color: $color-primary;
-        
     }
 
 }
-
 .card-module img {
     
     display: flex;
