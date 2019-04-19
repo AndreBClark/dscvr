@@ -2,10 +2,12 @@
 .button {
     background:$color-tertiary;
     color: #000;
+    font-weight: bold;
     border: #000 solid 3px;
     width: 200px;
     height: 40px;
     text-align: center;
+    transition: 0.5s;
     &:focus,
     &:hover {
         color: #000;
@@ -40,10 +42,16 @@
     }
     }
 
+    &--hoverinversetextskew {
+      &:hover {
+        transform: skew(-20deg, 0deg);
+    }
+    }
+
     &--hoverstraight {
       &:hover {
         transform: skew(0deg, 0deg);
-        
+
     }
     }
 
@@ -85,13 +93,13 @@
                   }
 
 
-    &.success {
-        background: $color-success;
-        color: #fff;
-        &:focus,
-        &:hover {
-            background: darken($color-success, 10%);
-            color: #fff;
-        }
-    }
+    // &.success {
+    //     background: $color-success;
+    //     color: #fff;
+    //     &:focus,
+    //     &:hover {
+    //         background: darken($color-success, 10%);
+    //         color: #fff;
+    //     }
+    // }
 }
