@@ -1,5 +1,5 @@
-footer { 
-    background-color: $color-primary; 
+footer {
+    background-color: $color-primary;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,8 +8,51 @@ footer {
     padding: 3em;
 }
 
+.section_thanks{
+  text-align: center;
+}
+
+.section_socials{
+  text-align: center;
+}
+
+.section_subscribe{
+  text-align: center;
+}
+
 ul {
     list-style-type: none;
     text-align: center;
+    margin-left: 0;
 }
 
+.footer-nav{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-nav__item{
+  padding: 0 20px 0 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a.fab, a.fas {
+	padding: 0 3em;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+
+}
+
+.button {
+    margin-left: 20px;
+}

@@ -80,7 +80,7 @@ themes/*/lib/vendor
 assets/css/app.min.css
 assets/css/core.min.css
 assets/js/app.min.js
-
+.vscode
 # magento
 var/session/
 var/report/

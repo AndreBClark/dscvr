@@ -13,13 +13,14 @@ body {
 	}
 }
 
-// a {
-//     color: $color-primary-dark;
-//     &:focus,
-//     &:hover {
-//         color: $color-primary;
-//     }
-// }
+a {
+    color: $color-gray-dark;
+	text-decoration: underline;
+    &:focus,
+    &:hover {
+
+    }
+}
 
 h1 {
     font-size: 24px;

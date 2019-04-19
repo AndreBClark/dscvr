@@ -17,6 +17,7 @@ $color-tertiary-dark: darken($color-tertiary, 20%);
 $color-gray: #888;
 $color-gray-light: lighten($color-gray, 20%);
 $color-gray-dark: darken($color-gray, 20%);
+$color-dark: darken($color-gray, 40%);
 
 $color-success: #d9ebd4;
 $color-success-light: lighten($color-success, 20%);
@@ -30,6 +31,8 @@ $color-alert: #941414;
 $color-alert-light: lighten($color-alert, 20%);
 $color-alert-dark: darken($color-alert, 20%);
 
+
+$color-light: #eee;
 $font-sans-serif: Helvetica, Roboto, sans-serif;
 $font-serif: roboto_slab, serif;
 $font-monospace: Consolas, "Liberation Mono", Courier, monospace;
