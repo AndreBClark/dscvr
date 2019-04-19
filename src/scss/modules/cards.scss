@@ -2,15 +2,13 @@
 	box-sizing: border-box;
     padding: 2em;
     margin: 1em;
-    flex: 1 300px;
+    flex: 1 1 300px;
 
 	& img {
 		background: $color-soft-white;
 	    display: flex;
 	    justify-content: center;
-	    max-width: 300px;
-	    max-height: 300px;
-	    margin: 2em;
+		width: 100%;
 	}
 
     &--yellow {
