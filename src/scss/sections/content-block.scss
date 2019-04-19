@@ -1,0 +1,10 @@
+.content-block {
+	margin: 2em auto;
+	width: 90vw;
+	&--narrow {
+		max-width: 40em;
+	}
+	&--wide {
+		max-width: 70em;
+	}
+}
