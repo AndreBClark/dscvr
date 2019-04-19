@@ -3,9 +3,10 @@ h1 {
   display: none;
 }
 
-// #mobile-menu {
-//   display: none;
-// }
+#mobile-menu {
+  margin: 0;
+
+}
 
 .nav__mobile {
   display: flex;
@@ -32,9 +33,15 @@ padding-right: 50px;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  border: 3px solid black;
   width: 100%;
   height: 20%;
+  font-size: 2em;
+  color:#000;
+  font-weight: bold;
+
+}
+
+&--dropdownlist-item:hover {
 }
 
 // &--shape {
