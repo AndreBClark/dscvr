@@ -1,5 +1,12 @@
 .nav-desktop {
 	display: none;
+
+& ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 0;
+}
 }
 @media only screen and (min-width: 960px) {
 
@@ -8,7 +15,7 @@
   position   : sticky;
   background: $color-light;
   box-shadow : 5px 5px 5px #ccc;
-  text-align : center;
+  // text-align : center;
   font-size  : calc(1em + 1vw);
   transition : .5s all;
   padding: .5em 0 0.05em 0;
