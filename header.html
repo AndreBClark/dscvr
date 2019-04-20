@@ -6,26 +6,66 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Header</title>
 	<link rel="stylesheet" href="./dist/css/app.css">
+
+	<script>
+
+	//wraps all javascript
+function init() {
+		var menuDropdownList = document.getElementById('mobileMenu'); //targets ul with menu a tags
+		function menuClick() {
+			var hamburgerMenu = document.getElementById('hamburger'); //targets mobile hamburger menu icon
+			hamburgerMenu.onclick = showMenu;
+	 } //sets onclick listening to mobile hamburger menu
+
+	function showMenu() {
+		var menuDropdownList = document.getElementById('mobileMenu');
+		var hamburgerMenu = document.getElementById('hamburger')
+
+			//if the window is greater than or equal to 769px then do not run this function
+			if (window.innerWidth >= '769px'){
+				return false;
+			}
+
+		//mobile menu toggle
+		 else if (menuDropdownList.style.display ==='none') {
+		    menuDropdownList.style.display = 'block';
+		  }
+		  else {
+		    menuDropdownList.style.display = 'none';
+
+		  }
+	}
+	menuClick(); //starts onclick listening
+
+}; //end of function init
+
+window.onload = init; //runs all javascript with init function on window load
+
+	</script>
+
+
 </head>
 <body>
 	<header class="nav-desktop">
 		<nav>
-		<ul>
-			<li class="nav-desktop__item">
-					<a class="h1 nav-link" href=""><span class="nav__mobile--logo"><img src="src/img/dscvr_retro.png" alt="DSCVR Logo" /></span></a>
-				<!-- <a class="h1 nav-link" href="/index.html">D S C V R
-				</a> -->
-			</li>
-			<li class="nav-desktop__item">
+			<!-- Mobile Nav header: logo and hamburger menu STARTS -->
+			<div class="nav__mobile--logoandham"><span class=""><img id="mobileLogo" src="src/img/dscvr_retro.png" alt="DSCVR Logo" /></span>
+					<span id="hamburger"><i  class="fas fa-bars fa-2x nav__mobile--hamburger"></i></span>
+				</div>
+
+				<!-- Mobile Nav header: logo and hamburger menu ENDS -->
+
+		<ul id="mobileMenu" class="mobile-menu">
+			<li class="nav-desktop__item nav-mobile__item">
 				<a class="nav-link nav-link--primary" href="/portfolio.html">Portfolio
 				</a>
 			</li>
-			<li class="nav-desktop__item">
+			<li class="nav-desktop__item nav-mobile__item">
 				<a class="nav-link nav-link--secondary"
 				href="/guestbook.html">Guestbook
 				</a>
 			</li>
-			<li  class="nav-desktop__item">
+			<li  class="nav-desktop__item nav-mobile__item">
 				<a class=" nav-link nav-link--tertiary" href="/contact.html">Contact
 				</a>
 			</li>

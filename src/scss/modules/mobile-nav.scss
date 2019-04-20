@@ -4,6 +4,7 @@ h1 {
 }
 
 #mobile-menu {
+
   margin: 0;
 
 }
@@ -28,18 +29,18 @@ color: #000;
 padding-right: 50px;
 }
 
-&--dropdownlist-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  width: 100%;
-  height: 20%;
-  font-size: 2em;
-  color:#000;
-  font-weight: bold;
-
-}
+// &--dropdownlist-item {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #fff;
+//   width: 100%;
+//   height: 20%;
+//   font-size: 2em;
+//   color:#000;
+//   font-weight: bold;
+//
+// }
 
 &--dropdownlist-item:hover {
 }
