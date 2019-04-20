@@ -13,25 +13,27 @@
 <script>
 
 function init() {
+var menuDropdownList = document.getElementById('mobile-menu');
+menuDropdownList.style.display ='none';
 // var menuDropdownList = document.getElementById('mobile-menu');
-// menuDropdownList.style.display ='none';
-// var menuDropdownList = document.getElementById('mobile-menu');
-var hamburgerMenu = document.getElementsByTagName('i');
+function menuClick() {
+var hamburgerMenu = document.getElementById('hamburger');
 hamburgerMenu.onclick = showMenu;
-
+}
 
 function showMenu() {
 var menuDropdownList = document.getElementById('mobile-menu');
-  if (menuDropdownList.style.display ==='block') {
-menuDropdownList.style.display = 'none';
+  if (menuDropdownList.style.display ==='none') {
+    menuDropdownList.style.display = 'block';
+  }
+  else {
+    menuDropdownList.style.display = 'none';
+  }
 }
-else {
-  menuDropdownList.style.display = 'block';
-}
-
-}
+menuClick();
 
 };
+
 
 
 window.onload = init;
@@ -50,7 +52,7 @@ window.onload = init;
 
 <nav class="nav__mobile">
  <div class="nav__mobile--logoandham"><span class="nav__mobile--logo"><img src="src/img/dscvr_retro.png" alt="DSCVR Logo" /></span>
-   <span><i class="fas fa-bars fa-2x nav__mobile--hamburger"></i></span>
+   <span id="hamburger"><i  class="fas fa-bars fa-2x nav__mobile--hamburger"></i></span>
  </div>
  <ul id="mobile-menu">
 <li class="nav__mobile--dropdownlist-item"> <a href"">Home<a></li>
