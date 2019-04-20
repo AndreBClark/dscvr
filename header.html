@@ -14,28 +14,40 @@ function init() {
 		var menuDropdownList = document.getElementById('mobileMenu'); //targets ul with menu a tags
 		function menuClick() {
 			var hamburgerMenu = document.getElementById('hamburger'); //targets mobile hamburger menu icon
-			hamburgerMenu.onclick = showMenu;
-	 } //sets onclick listening to mobile hamburger menu
+			hamburgerMenu.onclick = showMenu;  //sets onclick listening to mobile hamburger menu
+
+			var showWebsite = document.getElementsByTagName('body');
+			// var w = window.clientWidth;
+	 }
+
+	// function screenSizeCheck() {
+	// 	//if the window is greater than or equal to 769px then change the display of the ul to flex
+	// 	if (window.onresize >= '769px'){
+	// 		menuDropdownList.style.display = 'flex';
+	// 	}
+	// 	//if the window is less than 769px then run showMenu which changes ul to display none or display block
+	// 	else if (window.onresize < '769px') {
+	// 		menuDropdownList.style.display = showMenu;
+	// 	}
+	// }
 
 	function showMenu() {
+
 		var menuDropdownList = document.getElementById('mobileMenu');
 		var hamburgerMenu = document.getElementById('hamburger')
 
-			//if the window is greater than or equal to 769px then do not run this function
-			if (window.innerWidth >= '769px'){
-				return false;
-			}
-
 		//mobile menu toggle
-		 else if (menuDropdownList.style.display ==='none') {
+		if (menuDropdownList.style.display ==='none') {
 		    menuDropdownList.style.display = 'block';
 		  }
 		  else {
 		    menuDropdownList.style.display = 'none';
 
 		  }
+
 	}
 	menuClick(); //starts onclick listening
+	window.onresize = screenSizeCheck; //runs a screen size check when window is resized
 
 }; //end of function init
 
