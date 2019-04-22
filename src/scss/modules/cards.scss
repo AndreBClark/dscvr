@@ -1,24 +1,44 @@
-.card-module {
-    
-    flex-basis: 400px;
-    padding: 3em;
-    margin: 3em;
+.card {
+	box-sizing: border-box;
+    padding: 2em;
+    margin: 1em;
+    flex: 1 1 300px;
 
+	& img {
+	    display: flex;
+	    justify-content: center;
+		width: 100%;
+	}
 
     &--yellow {
         background: $color-secondary;
-        
     }
 
 
     &--pink {
         background: $color-tertiary;
-        
-      
     }
 
+    &--blue {
+        background-color: $color-primary;
+    }
 
 }
 
+p {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
 
 
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.cards-button {
+    display: flex;
+    justify-content: center;
+}

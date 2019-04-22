@@ -2,15 +2,9 @@
 	margin: 2em auto;
 	width: 90vw;
 	&--narrow {
-		max-width: 60em;
-	}
-	&--wide {
 		max-width: 80em;
 	}
-	&--split {
-		display: flex;
-	}
-	&--split > * {
-		flex: 1 1;
+	&--wide {
+		max-width: 90em;
 	}
 }
