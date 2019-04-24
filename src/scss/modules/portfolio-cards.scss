@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.wrapper {
+.portfolio-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,13 +16,14 @@
 }
 
 .wrapper--alignleft {
-flex: 1;
+display: flex;
 width: 80%;
+align-content: center;
+height: 100%;
 
 }
 .wrapper--alignright {
 display: flex;
-flex: 1;
 width: 80%;
 justify-content: flex-end;
 align-content: center;
