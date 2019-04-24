@@ -39,6 +39,7 @@
 
 	  &__item {
 	    list-style : none;
+		display: inline;
 	  }
 
 	  &__link {
@@ -52,7 +53,6 @@
 	.nav-link {
 	  padding         : 0 1em;
 	  color           : $color-dark;
-	  text-decoration : none;
 	  text-decoration : none;
 	  // text-transform  : uppercase;
 	  font-weight     : 700;
