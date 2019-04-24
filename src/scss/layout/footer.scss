@@ -40,8 +40,7 @@ ul {
 }
 
 .footer-nav__item{
-  padding: 0 1.5em;
-  font-size: large;
+  padding: 0 1em;
   margin: auto;
   justify-content: space-around;
 }
@@ -60,6 +59,18 @@ a.fab {
     justify-content: space-around;
 }
 
+#mc-embedded-subscribe-form{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: space-around;
+}
+
+#mc-embedded-subscribe{
+  width: auto;
+  margin: 0 auto;
+}
+
 form {
     display: flex;
 
@@ -67,6 +78,11 @@ form {
 
 .email{
   text-align: center;
+  // margin: 0px 10px 16px 10px;
+  flex: 1 0 150px;
+}
+form .clear{
+  flex: 0 1 auto;
 }
 
 .button {
@@ -75,4 +91,6 @@ form {
 
 .copyright{
   font-size: smaller;
+  text-align: center;
+  padding: 0 10px;
 }
