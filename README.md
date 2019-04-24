@@ -18,9 +18,10 @@
 1. check if node is installed ``node --version`` or ``npm --version`` Install [node.js](https://nodejs.org/en/)
 
 ### 4. Initial Build Process
-
+1. Change branch to ``dev``
+  - in the github desktop app, click**current branch** then select dev from the dropdown
 1. Clone Repository
-1. Open CLI at ``dscvr/src/`` or using Github ``cmd + ` `` then ``cd src``
+1. Open CLI at ``dscvr/src/`` or using Github ``ctrl + ` `` then ``cd src``
  1. enter ``npm install``
  1. enter``npm run build``
 1. Using Github ``cmd + shift + A`` ``Repository>Open in Editor Name``
