@@ -3,6 +3,7 @@
     padding: 2em;
     margin: 1em;
     flex: 1 1 300px;
+		max-width: 400px;
 
 	& img {
 	    display: flex;
@@ -25,11 +26,7 @@
 
 }
 
-p {
-    display: flex;
-    justify-content: center;
-    margin: 1em;
-}
+
 
 
 h1 {

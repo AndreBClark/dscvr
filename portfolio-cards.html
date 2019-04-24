@@ -5,21 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./dist/css/app.css">
-    <title>card module demo</title>
+    <title>portfolio card module demo</title>
 </head>
 <body>
-    <section class="content-block content-block--wide">
-    <div class="card card--yellow">
+  <!-- overall container encompassing all cards  -->
+  <section class="portfolio-card__container">
+<div class="wrapper">
+  <!-- first card starts  -->
+  <!-- the wrapper only wraps individual cards  -->
 
-		<a><img src="src/img/Web_Portfolio_1200px_RGB.jpg"></a>
+    <div class="wrapper--alignleft">
+    <div class="card">
+	<a><img src="./src/img/portfolio/web-illustration-large-lydia.png"></a>
         <h1>PORTFOLIO</h1>
-       <p class="card__description">
-        Discover Us!
+       <p class="student-name">
+        Lydia Ramus
        </p>
        <div class="cards-button">
         <a href="" class="button button--skew button--hoverstraight button__nocolor button__nocolor--yellow"><div class="button--inverseskew button--hoverstraight">View Event</div></a>
      </div>
     </div>
+  </div>
+    <!-- first card ends  -->
+    <!-- second card starts  -->
+    <div class="wrapper--alignright">
+    <div class="card">
+    <a><img src="./src/img/portfolio/web-illustration-large-emma.png"></a>
+          <h1>PORTFOLIO</h1>
+         <p class="student-name">
+           Emma Castleberry
+         </p>
+         <div class="cards-button">
+          <a href="" class="button button--skew button--hoverstraight button__nocolor button__nocolor--yellow"><div class="button--inverseskew button--hoverstraight">View Event</div></a>
+       </div>
+      </div>
+    </div>
+      <!-- second card ends  -->
+
+</div>
   </section>
 </body>
 <html>

@@ -1,0 +1,35 @@
+
+
+.portfolio-card__container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper--alignleft {
+flex: 1;
+width: 80%;
+}
+.wrapper--alignright {
+display: flex;
+flex: 1;
+justify-content: flex-end;
+width: 80%;
+
+}
+
+
+
+.student-name {
+    margin: 1em;
+    font-weight: bold;
+    font-size: 2em;
+}
