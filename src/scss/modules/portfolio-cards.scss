@@ -5,6 +5,11 @@
   flex-direction: column;
 }
 
+.student-name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 .portfolio-wrapper {
   display: flex;
   align-items: center;
@@ -13,9 +18,9 @@
 
 }
 
-.card {
-  border: none;
-}
+// .card {
+//   border: none;
+// }
 
 .wrapper--alignleft {
 display: flex;
@@ -44,8 +49,7 @@ flex-wrap: wrap-reverse;
 .social-wrapper span {
   margin-right: 5px;
 }
-.student-name {
-    margin: 1em;
+.designer-name {
     font-weight: bold;
 }
 
@@ -62,6 +66,10 @@ flex-wrap: wrap-reverse;
 
 }
 
+.social-wrapper {
+margin-bottom: 10px;
+}
+
 ul.portfolio-content {
   display: flex;
   flex-wrap: wrap;
@@ -76,8 +84,7 @@ ul.portfolio-content {
 .portfolio-content li {
   display: flex;
   max-width: 200px;
-  max-height: 300px;
-  object-fit: cover;
+  max-height: 200px;
   justify-content:space-around;
 }
 
@@ -85,6 +92,8 @@ ul.portfolio-content {
 .portfolio-content img {
   max-height: 100px;
   max-width: 100px;
+  object-fit: cover;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
@@ -92,8 +101,13 @@ ul.portfolio-content {
 @media only screen and (min-width: 500px) {
     .social-wrapper {
       display: flex;
-      align-items: center;
-      width: 300px;
+      align-content: center;
+      width: 350px;
+    }
+
+    .social-wrapper p {
+      margin-top: 4px;
+      margin-right: 20px;
     }
 
 
@@ -131,7 +145,11 @@ ul.portfolio-content {
   }
 
   .portfolio-content img {
-    max-height: 200px;
-    max-width: 200px;
+    display: flex;
+    max-width: 150px;
+    max-height: 150px;
   }
+
+
+
 }
