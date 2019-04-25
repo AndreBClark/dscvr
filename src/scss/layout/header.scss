@@ -29,16 +29,24 @@
 
 /* Main nav styling and animation  */
 	.nav-desktop {
-	  position   : sticky;
 	  background: $color-light;
 	  box-shadow : 5px 5px 5px #ccc;
 	  // text-align : center;
 	  font-size  : calc(1em + 1vw);
 	  transition : .5s all;
-	  padding: .5em 0 0.05em 0;
+	  padding: .5em 0 .05em 0;
+	&--bg-stripes {
+		    background-image: img-url('/branding/stripes.svg');
+			// url(./../img/branding/stripes.svg);
+		    background-size: 20vw;
+		    background-repeat: no-repeat;
+		    background-position: left center;
+
+		}
 
 	  &__item {
 	    list-style : none;
+		display: inline;
 	  }
 
 
@@ -46,6 +54,7 @@
 
 	.nav-link {
 	  padding         : 0 1em;
+
 	  color           : $color-dark;
 	  text-decoration : none;
 	  text-decoration : none;
