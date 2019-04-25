@@ -17,30 +17,22 @@
 
 .wrapper--alignleft {
 display: flex;
+flex: 1;
 width: 80%;
 align-content: center;
+flex-wrap: wrap;
 height: 100%;
 
 }
 .wrapper--alignright {
 display: flex;
+flex: 1;
 width: 80%;
 justify-content: flex-end;
 align-content: center;
 flex-wrap: wrap-reverse;
 height: 100%;
 
-
-}
-
-.portfolio-content__wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  max-width: 700px;
-  padding: 10px;
-  border: pink solid 3px;
 
 }
 
@@ -57,6 +49,16 @@ height: 100%;
 .student-name {
     margin: 1em;
     font-weight: bold;
+}
+
+.portfolio-content__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  max-width: 700px;
+  border: pink solid 3px;
+
 }
 
 .portfolio-content {
