@@ -42,7 +42,7 @@
 
                 <section class="content-block content-block--wide">
                     
-                            <div class="card card--blue">
+                            <div class="card card">
                      
                                 <a><img src="src/img/"></a>
                                 <h1>DSCVR Student. Portfolio. Show</h1>
@@ -59,6 +59,35 @@
 
                 <!---CARD ENDS-------->            
                         </section>
+
+
+                        <script>
+
+
+                                function init() {
+                            // Start Mobile Hero Image Slider
+                                 var imageTotal = 0;
+                                 imageSlider();
+                            
+                                 function imageSlider() {
+                                   var images = document.getElementsByClassName("hero-image__mobile--slider");
+                                   for (var i = 0; i < images.length; i++) {
+                                     images[i].style.display = "none";
+                                   }
+                                  imageTotal++;
+                                  if (imageTotal > images.length) { imageTotal = 1
+                                  }
+                                  images[imageTotal - 1].style.display = "block";
+                                  setTimeout (imageSlider, 2000);
+                                 }
+                            // End Mobile Hero Image Slider
+                            
+                            
+                              };
+                            
+                              window.onload = init;
+                            
+                            </script>
                 
 </body>
 </html>
