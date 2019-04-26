@@ -96,6 +96,13 @@ ul.portfolio-content {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+.portfolio-content li:hover{
+  transition: 0.5s linear;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+
 
 // MEDIA QUERY FOR TABLET SIZE
 @media only screen and (min-width: 500px) {
@@ -137,11 +144,11 @@ ul.portfolio-content {
   }
 
   .wrapper--alignleft {
-  height: 700px;
+  height: 600px;
 
   }
   .wrapper--alignright {
-  height: 700px;
+  height: 600px;
   }
 
   .portfolio-content img {
@@ -149,7 +156,67 @@ ul.portfolio-content {
     max-width: 150px;
     max-height: 150px;
   }
+}
 
 
+// Styling for lightbox elements
 
+.lightbox{
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+
+}
+
+.lightbox_closeout{
+  color: white;
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  z-index: 3;
+}
+
+
+.lightbox_images{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  height: 960px;
+}
+
+.main_img{
+  max-width: 450px;
+  min-width: 300px;
+  object-fit: contain;
+  background-color: black;
+}
+
+ul.thumb_img{
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  align-content: space-around;
+}
+
+.thumb_img li{
+  display: flex;
+  justify-content: space-around;
+  flex: 0 1 100px;
+  background-color: black;
+}
+
+.thumb_img li img{
+  flex: 0 1 100px;
+  height: 100px;
+  object-fit: cover;
 }
