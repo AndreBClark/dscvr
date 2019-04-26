@@ -1,5 +1,5 @@
 .bg-stripes {
-    background: url('dist/img/branding/stripes.svg');
+    background: img('branding/stripes.svg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -16,5 +16,7 @@
         }
     
 
-     
+    & h3 {
+        text-align: center;
+    }
     }
