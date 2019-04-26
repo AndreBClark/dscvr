@@ -1,9 +1,25 @@
- .mc-field-group.input-group ul li {
+.content-block h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.indicates-required {
+  text-align: center;
+  font-size: 12px;
+}
+
+.mc-field-group.input-group ul li {
   display: inline;
 }
 
+.mc-field-group {
+  margin-top: 30px;
+}
+
 .content__gdpr .marketing-header {
+  margin-top: 40px;
   text-align: center;
+  font-size: 1.5em;
 }
 
 .content__gdpr .checkbox.subfield {
@@ -13,4 +29,41 @@
 
 .content__gdprLegal a {
   text-align: left;
+}
+
+.mc_fieldset.gdprRequired.mc-field-group {
+  text-align: center;
+  margin-top: 0;
+}
+
+.mc_fieldset.gdprRequired.mc-field-group label {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.mc-field-group.input-group strong {
+  width: 65px;
+  min-width: 65px;
+}
+
+.content__gdpr .unsubscribe {
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+.content__gdprLegal .unsubscribe, a {
+  font-size: 12px;
+}
+
+.clear {
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media only screen and (max-device-width: 480px) {
+
+  .mc-field-group.input-group ul li {
+    display: block;
+    text-align: left;
+  }
 }
