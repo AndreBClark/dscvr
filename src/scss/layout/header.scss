@@ -1,0 +1,138 @@
+
+/* Mobile nav logo and hamburger icon styling */
+.nav__mobile {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+
+	&--logoandham {
+	  display: flex;
+	  align-items: center;
+	}
+
+	&--logo img {
+	  max-width: 80%;
+	}
+
+	&--hamburger {
+	color: #000;
+	padding-right: 50px;
+	}
+
+}
+
+/* Hide mobile nav menu */
+#mobileMenu {
+	display: none;
+}
+
+/* Main nav styling and animation  */
+	.nav-desktop {
+	  position   : sticky;
+	  background: $color-light;
+	  box-shadow : 5px 5px 5px #ccc;
+	  // text-align : center;
+	  font-size  : calc(1em + 1vw);
+	  transition : .5s all;
+	  padding: .5em 0 0.05em 0;
+
+	  &__item {
+	    list-style : none;
+		display: inline;
+	  }
+
+	  &__link {
+	    color           : $color-dark;
+	    text-decoration : none;
+	    font-weight     : 700;
+	    transition      : .5s color;
+	  }
+	}
+
+	.nav-link {
+	  padding         : 0 1em;
+	  color           : $color-dark;
+	  text-decoration : none;
+	  // text-transform  : uppercase;
+	  font-weight     : 700;
+	  letter-spacing  : 0.15em;
+	  transition      : .5s color;
+
+	  &:hover {
+	    color : $color-dark;
+	  }
+
+
+	  &:after {
+	    content    : "";
+	    display    : block;
+	    position   : absolute;
+	    bottom     : 0;
+	    left       : 0;
+	    width      : 0;
+	    height     : .25em;
+	    background : none repeat scroll 0 0 transparent;
+	    transition : width 0.3s ease 0s;
+	  }
+
+	  &--primary:after {
+	    background : $color-primary;
+	  }
+
+	  &--secondary:after {
+	    background : $color-secondary;
+	  }
+
+	  &--tertiary:after {
+	    background : $color-tertiary;
+	  }
+
+	  &:hover:after, &:active:after {
+	    left  : 0;
+	    width : 100%;
+	  }
+	}
+
+
+@media only screen and (min-width: 769px) {
+	/* Hide hamburger menu icon */
+	#hamburger {
+		display: none;
+	}
+
+/* .nav-desktop nav is parent container to ul */
+	.nav-desktop nav{
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+
+		/* Logo */
+		#mobileLogo {
+			flex: 1;
+		}
+		/* ul */
+		#mobileMenu {
+			display: flex;
+			padding-top: 30px;
+			flex: 2;
+
+		}
+/* Nav items (portfolio, guestbook, contact) */
+		&__item {
+	    display: inline;
+	  }
+	}
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    color: $color-dark;
+  }
+}
+
+}
