@@ -6,6 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./dist/css/app.css">
     <title>portfolio card module demo</title>
+
+<script>
+
+function init() {
+  // targets ul that holds each student's three portfolio pieces
+  var portfolioGallery = document.getElementsByClass('portfolio-content');
+
+  var studentCard = document.getElementsByClassName('studentCard');
+  var portfolioContentBlock = document.getElementsByClassName('portfolio-content__wrapper');
+
+  // Open the Lightbox
+  function openLightbox() {
+    for (var i = 0; i < portfolioGallery.length; i++ ){
+  document.getElementsByClass('lightbox').style.display = "flex";
+}
+}
+
+  // Close the Lightbox
+  function closeLightbox() {
+    document.getElementsByClass('lightbox').style.display = "none";
+  }
+};
+window.onload = init;
+
+ </script>
+
+
+
+
+
+
+
+
+
 </head>
 <body>
   <h1>PORTFOLIO</h1>
@@ -17,7 +51,7 @@
 
 <!-- Lydia's card start -->
     <div class="wrapper--alignleft">
-      <div class="card">
+      <div class="studentCard card">
 	        <a><img src="dist/img/portfolio/web-illustration-large-lydia.png"></a>
 
        <h2 class="student-name">
@@ -38,7 +72,7 @@
       <p>I have always been drawn to writing and the immersive art of storytelling. Great design tells a story of its own, and I love trying to capture that in its visual form.</p>
 
         <ul class="portfolio-content">
-          <li class="nav-link nav-link--secondary"><img src="dist/img/emma-castleberry/Cold_November-web.png" alt="Vector Illustration Movie Poster." /></li>
+          <li onclick="openLightbox()" class="nav-link nav-link--secondary"><img src="dist/img/emma-castleberry/Cold_November-web.png" alt="Vector Illustration Movie Poster." /></li>
           <li class="nav-link nav-link--secondary"><img src="dist/img/emma-castleberry/Cthulhu_BookCover-web.png" alt="Book cover of a Cthulhu." /></li>
           <li class="nav-link nav-link--secondary"><img src="dist/img/emma-castleberry/MessagesThatMatter.png" alt="Communications 101 Textbook Cover." /></li>
         </ul>
@@ -69,7 +103,7 @@
 
       </div>
 
-    <div class="card">
+    <div class="studentCard card">
     <a><img src="dist/img/portfolio/web-illustration-large-emma.png"></a>
 
          <h2 class="student-name">
@@ -83,7 +117,7 @@
 
       <!-- Joe's card start -->
 <div class="wrapper--alignleft">
-  <div class="card">
+  <div class="studentCard card">
     <a><img src="dist/img/portfolio/web-illustration-large-joe.png"></a>
 
 <h2 class="student-name">
@@ -134,7 +168,7 @@ Joe Click
 
 </div>
 
-<div class="card">
+<div class="studentCard card">
 <a><img src="dist/img/portfolio/web-illustration-large-danielle.png"></a>
 
 <h2 class="student-name">
@@ -148,7 +182,7 @@ Danielle Prochaska
 
 <!-- Karey's card start -->
 <div class="wrapper--alignleft">
-<div class="card">
+<div class="studentCard card">
 <a><img src="dist/img/portfolio/web-illustration-large-karey.png"></a>
 
 <h2 class="student-name">
@@ -200,7 +234,7 @@ Karey Stivers
 
 </div>
 
-<div class="card">
+<div class="studentCard card">
 <a><img src="dist/img/portfolio/web-illustration-large-kennedy.png"></a>
 
 <h2 class="student-name">
@@ -214,7 +248,7 @@ Kennedy Pew
 
 <!-- Suelynn's card start -->
 <div class="wrapper--alignleft">
-<div class="card">
+<div class="studentCard card">
 <a><img src="dist/img/portfolio/web-illustration-large-suelynn.png"></a>
 
 <h2 class="student-name">
@@ -265,7 +299,7 @@ Suelynn Parker
 
 </div>
 
-<div class="card">
+<div class="studentCard card">
 <a><img src="dist/img/portfolio/web-illustration-large-mattea.png"></a>
  <h2 class="student-name">
    Mattea Bergland
@@ -278,7 +312,7 @@ Suelynn Parker
 
 <!-- Sam's card start -->
   <div class="wrapper--alignleft">
-  <div class="card">
+  <div class="studentCard card">
 <a><img src="dist/img/portfolio/web-illustration-large-sam.png"></a>
 
      <h2 class="student-name">
@@ -329,7 +363,7 @@ Suelynn Parker
 
     </div>
 
-  <div class="card">
+  <div class="studentCard card">
   <a><img src="dist/img/portfolio/web-illustration-large-kallie.png"></a>
 
        <h2 class="student-name">
@@ -342,7 +376,7 @@ Suelynn Parker
     <!-- Kallie's card ends  -->
     <!-- Andre's card start -->
         <div class="wrapper--alignleft">
-        <div class="card">
+        <div class="studentCard card">
     	<a><img src="dist/img/portfolio/web-illustration-large-andre.png"></a>
            <h2 class="student-name">
             Andre Clark
@@ -392,7 +426,7 @@ Suelynn Parker
 
           </div>
 
-        <div class="card">
+        <div class="studentCard card">
         <a><img src="dist/img/portfolio/web-illustration-large-jonah.png"></a>
 
              <h2 class="student-name">
@@ -406,7 +440,7 @@ Suelynn Parker
 
     <!-- Rachel's card start -->
         <div class="wrapper--alignleft">
-        <div class="card">
+        <div class="studentCard card">
     	<a><img src="dist/img/portfolio/web-illustration-large-rachel.png"></a>
             <h1>PORTFOLIO</h1>
            <h2 class="student-name">
@@ -443,7 +477,7 @@ Suelynn Parker
 
 
   <div class="lightbox_images">
-      <span class="lightbox_closeout">close</span>
+      <span class="lightbox_closeout" onclick="closeLightbox()">close</span>
     <div class="main_img">
       <img class="testimg" src="dist/img/emma-castleberry/Cold_November-web.png" alt="Spiff poster." />
 
