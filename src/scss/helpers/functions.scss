@@ -10,7 +10,7 @@
 	@return url('../fonts/' + $url);
 }
 
-@function img-url($url) {
+@function img($url) {
 	@return url('../img/' + $url);
 }
 
