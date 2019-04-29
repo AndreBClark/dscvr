@@ -1,7 +1,10 @@
 /* --- Native elements --- */
 
 body {
-    font-size: 16px;
+font-size: 16px;
+// font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1920 - 300)));
+font-size: calc(1em + 1vmin);
+
     font-family: $font-sans-serif;
 }
 @media only screen and (min-width: 769px) {
@@ -12,7 +15,6 @@ body {
 }
 
 a {
-    color: $color-gray-dark;
 	text-decoration: underline;
     &:focus,
     &:hover {
@@ -21,44 +23,43 @@ a {
 }
 
 
-h1 {
-    font-size: 24px;
-    @include breakpoint(medium) {
-        font-size: 36px;
-    }
-}
-h2 {
-    font-size: 20px;
-    @include breakpoint(medium) {
-        font-size: 30px;
-    }
-}
-h3 {
-    font-size: 19px;
-    @include breakpoint(medium) {
-        font-size: 24px;
-    }
-}
-h4 {
-    font-size: 18px;
-    @include breakpoint(medium) {
-        font-size: 22px;
-    }
-}
-h5 {
-    font-size: 17px;
-    @include breakpoint(medium) {
-        font-size: 20px;
-    }
-}
-h6 {
-    font-size: 16px;
-    @include breakpoint(medium) {
-        font-size: 18px;
-    }
-}
+// h1 {
+//     font-size: 24px;
+//     @include breakpoint(medium) {
+//         font-size: 36px;
+//     }
+// }
+// h2 {
+//     font-size: 20px;
+//     @include breakpoint(medium) {
+//         font-size: 30px;
+//     }
+// }
+// h3 {
+//     font-size: 19px;
+//     @include breakpoint(medium) {
+//         font-size: 24px;
+//     }
+// }
+// h4 {
+//     font-size: 18px;
+//     @include breakpoint(medium) {
+//         font-size: 22px;
+//     }
+// }
+// h5 {
+//     font-size: 17px;
+//     @include breakpoint(medium) {
+//         font-size: 20px;
+//     }
+// }
+// h6 {
+//     font-size: 16px;
+//     @include breakpoint(medium) {
+//         font-size: 18px;
+//     }
+// }
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;  // reset to new font-size
-    font-family: $font-sans-serif;
 	font-weight: 700;
 }
