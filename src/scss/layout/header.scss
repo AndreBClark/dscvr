@@ -55,13 +55,17 @@ $h5: calc(.5vw + 1em);
 }
 
 .mobile-menu{
-	display: flex;
-	height: calc(100vh - 100px);
+	height: calc(100vh - 88px);
 	width: 100%;
 	position: fixed;
 	flex-direction: column;
 	justify-content: space-around;
 	background-color: #fff;
+	& li {
+		padding: 1em 0;
+		background: img('branding/stripes.svg') no-repeat;
+		background-size: contain;
+	}
 }
 
 
