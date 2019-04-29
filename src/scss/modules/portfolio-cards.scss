@@ -161,9 +161,13 @@ ul.portfolio-content {
 
 // Styling for lightbox elements
 
-.lightbox{
-  background-color: rgba(0, 0, 0, 0.8);
+.closeLightbox{
   display: none;
+}
+
+.openLightbox{
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -173,7 +177,7 @@ ul.portfolio-content {
 
 }
 
-.lightbox_closeout{
+#lightbox_closeout{
   color: white;
   position: absolute;
   top: 80px;

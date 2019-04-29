@@ -11,23 +11,37 @@
 
 function init() {
   // targets ul that holds each student's three portfolio pieces
-  var portfolioGallery = document.getElementsByClass('portfolio-content');
+  var portfolioGallery = document.getElementsByClassName('portfolio-content');
 
   var studentCard = document.getElementsByClassName('studentCard');
   var portfolioContentBlock = document.getElementsByClassName('portfolio-content__wrapper');
 
-  // Open the Lightbox
-  function openLightbox() {
-    for (var i = 0; i < portfolioGallery.length; i++ ){
-  document.getElementsByClass('lightbox').style.display = "flex";
-}
-}
 
-  // Close the Lightbox
-  function closeLightbox() {
-    document.getElementsByClass('lightbox').style.display = "none";
-  }
+
+  var myList = document.getElementsByTagName('ul');
+    for (var i = 0; i < 14 ; i++){
+      myList[i].addEventListener('click', function(){document.getElementById('lightbox').className = 'openLightbox';});
+    }
+
+
+var closeTab = document.getElementById('lightbox_closeout')
+closeTab.addEventListener('click', function(){document.getElementById('lightbox').className = 'closeLightbox';});
 };
+
+
+
+// var myList = document.getElementsByTagName('ul');
+//   for (var i = 0; i < 14 ; i++){
+//     myList[i].addEventListener('click', function(){document.getElementById('lightbox').className = 'openLightbox';});
+//   }
+
+
+
+
+
+
+
+
 window.onload = init;
 
  </script>
@@ -72,7 +86,7 @@ window.onload = init;
       <p>I have always been drawn to writing and the immersive art of storytelling. Great design tells a story of its own, and I love trying to capture that in its visual form.</p>
 
         <ul class="portfolio-content">
-          <li onclick="openLightbox()" class="nav-link nav-link--secondary"><img src="dist/img/emma-castleberry/Cold_November-web.png" alt="Vector Illustration Movie Poster." /></li>
+          <li class="nav-link nav-link--secondary"><img src="dist/img/emma-castleberry/Cold_November-web.png" alt="Vector Illustration Movie Poster." /></li>
           <li class="nav-link nav-link--secondary"><img src="dist/img/emma-castleberry/Cthulhu_BookCover-web.png" alt="Book cover of a Cthulhu." /></li>
           <li class="nav-link nav-link--secondary"><img src="dist/img/emma-castleberry/MessagesThatMatter.png" alt="Communications 101 Textbook Cover." /></li>
         </ul>
@@ -473,20 +487,20 @@ Suelynn Parker
 </div>
 
 <!-- Code for Lightbox -->
-<div class="lightbox">
+<div id="lightbox" class="closeLightbox">
 
 
   <div class="lightbox_images">
-      <span class="lightbox_closeout" onclick="closeLightbox()">close</span>
+      <span id="lightbox_closeout" class="#">close</span>
     <div class="main_img">
-      <img class="testimg" src="dist/img/emma-castleberry/Cold_November-web.png" alt="Spiff poster." />
+      <img class="" src="" alt="" />
 
     </div>
 
     <ul class="thumb_img">
-        <li><img class="testimg" src="dist/img/emma-castleberry/Cold_November-web.png" alt="Spiff poster." /></li>
-        <li><img class="testimg" src="dist/img/emma-castleberry/Cthulhu_BookCover-web.png" alt="Spiff poster." /></li>
-        <li><img class="testimg" src="dist/img/emma-castleberry/MessagesThatMatter.png" alt="Spiff poster." /></li>
+        <li><img class="testimg" src="" /></li>
+        <li><img class="testimg" src="" /></li>
+        <li><img class="testimg" src="" alt="Spiff poster." /></li>
     </ul>
 
   </div>
