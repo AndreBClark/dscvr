@@ -15,61 +15,62 @@
 	<section class="content-block content-block--wide heading--center">
 
 
-			<!-- MOBILE HERO IMAGE SLIDER ENDS -->
-			<h1 class="heading--h1">DSCVR</h1>
-			<h3 class="heading--h3">Student Portfolio Show</h3>
-			<p class="card__description">
-				Discover the Graphic & Web Design graduating class of 2019 at the North Idaho College Workforce Training Center.
-			</p>
-			<h3 class="heading--h3">Friday, May 3rd <br> 4:30PM to 7PM</h3>
-			<p>North Idaho College Workforce Traning Center
-				525 S Clearwater Loop, Post Falls, ID 83854</p>
-				<div class="cards-button ">
-					<a href="https://www.facebook.com/events/296907444564690/?active_tab=about" class="button button--skew  button__nocolor button__nocolor--yellow">
-						View Event
-					</a>
-				</div>
+		<!-- MOBILE HERO IMAGE SLIDER ENDS -->
+		<h1 class="heading--h1">DSCVR</h1>
+		<h5 class="heading--h4">Student Portfolio Show</h5>
+		<p class="card__description heading--h5">
+			Discover the Graphic & Web Design graduating class of 2019 <br> at the North Idaho College Workforce Training Center.
+		</p>
+		<h4 class="heading--h4">Friday, May 3rd <br>4:30PM to 7PM</h4>
+		<a href="https://goo.gl/maps/zaiyNCzZuaN7J7359">
+
+		 <p>North Idaho College<br>Workforce Traning Center<br>
+			525 S Clearwater Loop, <br>Post Falls, ID 83854</p>
+		</a>
+				<a href="https://www.facebook.com/events/296907444564690/?active_tab=about" class="button button--skew  button__nocolor button__nocolor--yellow">
+					View Event
+				</a>
 			</div>
 
-			<!---CARD ENDS-------->
-		</section>
+		<!---CARD ENDS-------->
+	</section>
 
-		<!-- MOBILE HERO IMAGE MODULE BEGINS -->
+	<!-- MOBILE HERO IMAGE MODULE BEGINS -->
 
-			<!-- desktop hero image -->
-			<img class="hero-image__desktop" src="src/img/main-img-assets/desktop-hero-transparent.png" alt="Group illustration." />
-
-
-			<!-- MOBILE HERO IMAGE SLIDER ENDS -->
+	<!-- desktop hero image -->
+	<img class="hero-image__desktop" src="src/img/main-img-assets/desktop-hero-transparent.png" alt="Group illustration." />
 
 
-			<script>
+	<!-- MOBILE HERO IMAGE SLIDER ENDS -->
 
 
-			function init() {
-				// Start Mobile Hero Image Slider
-				var imageTotal = 0;
-				imageSlider();
-
-				function imageSlider() {
-					var images = document.getElementsByClassName("hero-image__mobile--slider");
-					for (var i = 0; i < images.length; i++) {
-						images[i].style.display = "none";
-					}
-					imageTotal++;
-					if (imageTotal > images.length) { imageTotal = 1
-					}
-					images[imageTotal - 1].style.display = "block";
-					setTimeout (imageSlider, 2000);
-				}
-				// End Mobile Hero Image Slider
+	<script>
 
 
-			};
+	function init() {
+		// Start Mobile Hero Image Slider
+		var imageTotal = 0;
+		imageSlider();
 
-			window.onload = init;
+		function imageSlider() {
+			var images = document.getElementsByClassName("hero-image__mobile--slider");
+			for (var i = 0; i < images.length; i++) {
+				images[i].style.display = "none";
+			}
+			imageTotal++;
+			if (imageTotal > images.length) { imageTotal = 1
+			}
+			images[imageTotal - 1].style.display = "block";
+			setTimeout (imageSlider, 2000);
+		}
+		// End Mobile Hero Image Slider
 
-			</script>
 
-		</body>
-		</html>
+	};
+
+	window.onload = init;
+
+	</script>
+
+</body>
+</html>
