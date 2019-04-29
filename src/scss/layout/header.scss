@@ -77,14 +77,13 @@ $h5: calc(.5vw + 1em);
 
 	.nav-desktop {
 		text-align : center;
-		font-size  : $h3;
+		font-size  : $h5;
 
 		&__list {
 			display: flex;
 			justify-content: space-around;
 		}
 	}
-
 
 
 	.nav-link {
@@ -109,6 +108,7 @@ $h5: calc(.5vw + 1em);
 			background: #fff;
 			transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		}
+
 
 		&--primary:after {
 			background : $color-primary;
