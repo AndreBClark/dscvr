@@ -1,40 +1,86 @@
+	$h1: calc(6em + 1vmin);
+	$h2: calc(4em + 1vmin);
+	$h3: calc(3em + 1vmin);
+	$h4: calc(2em + 1vmin);
+	$h5: calc(1em + 1vmin);
+// 	@media screen and (min-width: 769px) {
+// // $h1: calc(6em + 5vmin);
+// // $h2: calc(4em + 1vmin);
+// // $h3: calc(2em + 1vmin);
+// // $h4: calc(1.5em + 1vmin);
+// // $h5: calc(1em + 1vmin);
+// }
+// body {
+//   // font-size: calc( 16px + (72 - 16) * (100vw - 300px) / (1920 - 300) );
+//   font-size: $h5;
+// }
+.heading {
+	font-size: 12px;
+	line-height: 2em;
+	// margin-top: calc((1.5em - 2em) + 1.5rem);
+	margin-bottom: 1.5em;
+  &--h1 {
+    font-size: $h1;
+  }
+  &--h2 {
+    font-size: $h2;
+  }
+  &--h3 {
+    font-size: $h3
+  }
+  &--h4 {
+    font-size: $h4;
+  }
+  &--h5 {
+    font-size: $h4
+  }
+  &--center {
+	  text-align: center;
+	  margin: 0 auto;
+  }
+}
 
-.heading-h1 {
-    font-size: 24px;
-    @include breakpoint(medium) {
-        font-size: 36px;
-    }
-}
-.heading-h2 {
-    font-size: 20px;
-    @include breakpoint(medium) {
-        font-size: 30px;
-    }
-}
-.heading-h3 {
-    font-size: 19px;
-    @include breakpoint(medium) {
-        font-size: 24px;
-    }
-}
-.heading-h4 {
-    font-size: 18px;
-    @include breakpoint(medium) {
-        font-size: 22px;
-    }
-}
-.heading-h5 {
-    font-size: 17px;
-    @include breakpoint(medium) {
-        font-size: 20px;
-    }
-}
-.heading-h6 {
-    font-size: 16px;
-    @include breakpoint(medium) {
-        font-size: 18px;
-    }
-}
+
+
+// .heading {
+// 	font-size:
+// }
+// .heading-h1 {
+//     font-size: 24px;
+//     @include breakpoint(medium) {
+//         font-size: 36px;
+//     }
+// }
+// .heading-h2 {
+//     font-size: 20px;
+//     @include breakpoint(medium) {
+//         font-size: 30px;
+//     }
+// }
+// .heading-h3 {
+//     font-size: 19px;
+//     @include breakpoint(medium) {
+//         font-size: 24px;
+//     }
+// }
+// .heading-h4 {
+//     font-size: 18px;
+//     @include breakpoint(medium) {
+//         font-size: 22px;
+//     }
+// }
+// .heading-h5 {
+//     font-size: 17px;
+//     @include breakpoint(medium) {
+//         font-size: 20px;
+//     }
+// }
+// .heading-h6 {
+//     font-size: 16px;
+//     @include breakpoint(medium) {
+//         font-size: 18px;
+//     }
+// }
 .heading-h1, .heading-h2, .heading-h3, .heading-h4, .heading-h5, .heading-h6 {
-    line-height: 1.2;  // reset to new font-size
+      // reset to new font-size
 }
