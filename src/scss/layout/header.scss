@@ -16,8 +16,12 @@ $h5: calc(.5vw + 1em);
 	  align-items: center;
 	}
 
-	&--logo img {
-	  max-width: 80%;
+
+
+	&__logo img {
+		width: 100%;
+		height: auto;
+		max-height: 100px;
 	}
 
 	&--hamburger {
