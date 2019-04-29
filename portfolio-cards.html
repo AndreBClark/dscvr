@@ -16,24 +16,46 @@ function init() {
   var studentCard = document.getElementsByClassName('studentCard');
   var portfolioContentBlock = document.getElementsByClassName('portfolio-content__wrapper');
 
-
+  // var myList = document.getElementsByTagName('ul');
+  //   for (var i = 0; i < 14 ; i++){
+  //     myList[i].addEventListener('click', function(){
+  //       document.getElementById('lightbox').className = 'openLightbox';});
+  //   }
 
   var myList = document.getElementsByTagName('ul');
     for (var i = 0; i < 14 ; i++){
-      myList[i].addEventListener('click', function(){document.getElementById('lightbox').className = 'openLightbox';});
+      myList[i].addEventListener('click', function(){
+        document.getElementById('lightbox').className = 'openLightbox';
+        slideshow();});
     }
+
+function slideshow(eventObj){
+  var currentPortfolioLB = target.eventObj;
+  thumb_img.innerhtml = currentPortfolioLB.innerhtml;
+}
+
+    // CHANGES TO MAKE:
+    // add eventObj to function, define as targeted Click
+    // run function within function, click takes on EventObj, opens lightbox, run individual gallery function
+    // onclick.slideshow(eventObj){
+    //   currentPortfolioLB = target.eventobject;
+    //   thumb_img.innerhtml = currentPortfolioLB.innerhtml
+    // }
+
+
+
 
 
 var closeTab = document.getElementById('lightbox_closeout')
 closeTab.addEventListener('click', function(){document.getElementById('lightbox').className = 'closeLightbox';});
+
+
+
+
+
 };
 
 
-
-// var myList = document.getElementsByTagName('ul');
-//   for (var i = 0; i < 14 ; i++){
-//     myList[i].addEventListener('click', function(){document.getElementById('lightbox').className = 'openLightbox';});
-//   }
 
 
 
