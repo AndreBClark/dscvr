@@ -52,6 +52,9 @@ $h5: calc(.5vw + 1em);
 	color           : $color-dark;
 	text-decoration : none;
 	transition      : .5s color;
+	&:hover {
+		color: inherit;
+	}
 }
 
 .mobile-menu{
