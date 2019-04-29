@@ -33,8 +33,6 @@ $h5: calc(.5vw + 1em);
 		padding: 0 1em;
 	}
 
-
-
 }
 
 .nav-desktop {
@@ -54,10 +52,7 @@ $h5: calc(.5vw + 1em);
 	color           : $color-dark;
 	text-decoration : none;
 	transition      : .5s color;
-
 }
-
-
 
 .mobile-menu{
 	display: flex;
@@ -80,12 +75,6 @@ $h5: calc(.5vw + 1em);
 		text-align : center;
 		font-size  : $h3;
 
-		// &__item {
-		// 	list-style : none;
-		// 	// display: inline;
-		// 	padding: 0 1em;
-		// }
-
 		&__list {
 			display: flex;
 			justify-content: space-around;
@@ -103,11 +92,6 @@ $h5: calc(.5vw + 1em);
 		color           : $color-dark;
 		text-decoration : none;
 		transition      : .5s color;
-
-		// &:hover {
-		// color : $color-dark;
-		//  }
-
 
 		&:after {
 			background: none repeat scroll 0 0 transparent;
@@ -138,9 +122,5 @@ $h5: calc(.5vw + 1em);
 			left  : 0;
 			width : 100%;
 		}
-		// 	}
-		// }
-		/* Nav items (portfolio, guestbook, contact) */
-
 	}
 }
