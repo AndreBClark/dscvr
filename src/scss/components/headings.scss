@@ -1,4 +1,4 @@
-	$h1: calc(5em + 1vmin);
+	$h1: calc(3em + 1vmin);
 	$h2: calc(4em + 1vmin);
 	$h3: calc(3em + 1vmin);
 	$h4: calc(2em + 1vmin);
@@ -8,8 +8,6 @@
 //   font-size: $h5;
 // }
 .heading {
-
-	line-height: 2em;
 	// margin-top: calc((1.5em - 2em) + 1.5rem);
   &--h1 {
     font-size: $h1;
@@ -33,7 +31,7 @@
 }
 
 @media screen and (min-width: 769px) {
-	$dh1: calc(6em + 5vmin);
+	$dh1: calc(6em + 1vmin);
 	$dh2: calc(4em + 1vmin);
 	$dh3: calc(2em + 1vmin);
 	$dh4: calc(1.5em + 1vmin);
