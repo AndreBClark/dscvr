@@ -63,6 +63,9 @@ once you've completed work on an issue within a feature branch make a pull reque
 
 Here is A list of links and Resources for learning more web design stuff. full list repo: [Resource List Repository](https://github.com/AndreBClark/WebStudentResources)
 
+### Forms
+[Tips for Creating great Web Forms](https://css-tricks.com/tips-for-creating-great-web-forms/
+
 
 ### UI/UX
 * **[LearnUI.design](https://learnui.design/blog/)**

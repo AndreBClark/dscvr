@@ -3,9 +3,16 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const imagemin = require('imagemin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminJpegtran = require('imagemin-jpegtran');
+const imageminPngquant = require('imagemin-pngquant');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugins');
 
 module.exports = {
- 	mode: 'development',
     entry: {
         "app": "./js/_entry.js",
         // "app.min": "./js/_entry.js",  // no need for second min file when using production build
@@ -56,15 +63,35 @@ module.exports = {
                 }]
             },
             {
-                test: /\.(png|jpg|gif)$/,
-                loader: 'url-loader'
+                test: /\.(png|svg|jpg|gif)$/,
+                loader: 'file-loader',
+				options: {
+					name: '[name].[ext]',
+					outputPath: 'img',
+					publicPath: '../img'
+				}
             }
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
-        })
+        }),
+		new HtmlWebpackPlugin(),
+		new CopyWebpackPlugin([{
+  			from: 'img/**/**',
+  			to: path.resolve(__dirname, '../assets')
+		}]),
+		new ImageminPlugin({
+		pngquant: ({quality: 60-80}),
+  		plugins: [imageminMozjpeg({quality: 50})]
+	}),
+		new CleanWebpackPlugin(
+			{
+			cleanStaleWebpackAssets: true,
+		}
+		),
+
     ],
 
     optimization: {

@@ -4,62 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>North Idaho College Student Portfolio Show</title>
+	<link rel="stylesheet" href="dist/css/app.css">
 </head>
 
-<!-- HTML BEGINS --> 
-
-<title>
-    DSCVR | Student Portfolio Show
-</title>
 <body>
-<!-- NAVIGATION BEGINS -->
-
-<nav>
-
-</nav>
+	<header class="nav-desktop">
+		<nav>
+		<ul class="nav-desktop__list">
+			<li class="nav-desktop__item">
+				<a class="h1 nav-link" href="index.html">D S C V R
+				</a>
+			</li>
+			<li class="nav-desktop__item">
+				<a class="nav-link nav-link--primary" href="portfolio.html">Portfolio
+				</a>
+			</li>
+			<li class="nav-desktop__item">
+				<a class="nav-link nav-link--secondary"
+				href="guestbook.html">Guestbook
+				</a>
+			</li>
+			<li  class="nav-desktop__item">
+				<a class=" nav-link nav-link--tertiary" href="contact.html">Contact
+				</a>
+			</li>
+		</ul>
+	</nav>
+	</header>
 
 <!-- NAVIGATION ENDS -->
 
+
 <!-- HERO BEGINS -->
+<div class="hero-image__card">
+<!-- MOBILE HERO IMAGE SLIDER BEGINS -->
+  <div class="hero-image__mobile">
+    <img class="hero-image__mobile--slider" src="src/img/mobile-hero/web.png" alt="Illustration of the web team." />
+  <img class="hero-image__mobile--slider" src="src/img/mobile-hero/illustration.png" alt="Illustration of the illustration team." />
+  <img class="hero-image__mobile--slider" src="src/img/mobile-hero/branding.png" alt="Illustration of the branding team." />
+  <img class="hero-image__mobile--slider" src="src/img/mobile-hero/print.png" alt="Illustration of the print team." />
+  <img class="hero-image__mobile--slider" src="src/img/mobile-hero/socialmedia.png" alt="Illustration of thes social media team." />
 
+</div>
+
+<!-- desktop hero image -->
+<h1>
+	DSCVR | Student Portfolio Show <br />
+	<strong>May 3</strong>
+</h1>
+<a href="" class="button button--skew button--hoverstraight"><div class="button--inverseskew button--hoverstraight">View Event Details</div></a>
+<img class="hero-image__desktop" src="src/img/mobile-hero/desktop-hero-01.png" alt="Group illustration." />
+</div>
 <main>
+	<section class="content-block content-block--wide">
+	<div class="card card--yellow">
 
+		<a><img src="src/img/Web_Portfolio_1200px_RGB.jpg"></a>
+		<h1>PORTFOLIO</h1>
+	   <p class="card__description">
+		Discover Us!
+	   </p>
+	   <div class="cards-button">
+		<a href="" class="button button--skew button--hoverstraight button__nocolor button__nocolor--yellow"><div class="button--inverseskew button--hoverstraight">View Event</div></a>
+	 </div>
+	</div>
+	<div class="card card--pink">
+
+		<a><img src="#"></a>
+			<h1>PHOTOBOOTH</h1>
+		   <p class="card__description">
+			   Join The Fun!
+		   </p>
+		   <div class="cards-button">
+			<a href="" class="button button--skew button--hoverstraight button__nocolor button__nocolor--red"><div class="button--inverseskew button--hoverstraight">View Event</div></a>
+		 </div>
+		</div>
+
+		<div class="card card--blue">
+
+			<a><img src="#"></a>
+			<h1>DSCVR</h1>
+		   <p class="card__description">
+			Discover us at the NIC Workforce Training Center while our Graphic Design graduates showcase their top work.
+		   </p>
+		   <div class="cards-button">
+		   <a href="" class="button button--skew button--hoverstraight button__nocolor button__nocolor--blue"><div class="button--inverseskew button--hoverstraight">View Event</div></a>
+		</div>
+		</div>
+	</section>
 
 </main>
 
-<!-- SOCIAL MEDIA FEED BEGINS -->
-
-<!-- SOCIAL MEDIA FEED ENDS -->
-
-<!-- CONTACT FORM BEGINS-->
-<form>
-
-
-</form>
-
-<!-- CONTACT FORM ENDS -->
-
-<!-- PHOTO GALLERY BEGINS -->
-
-<figcaption>
-
-
-</figcaption>
 
 <!-- PHOTO GALLERY ENDS -->
 
 <!-- FOOTER BEGINS -->
 
 <footer>
+	<div class="section_thanks">
+	  <h4>Thanks for Attending!</h4>
+	<ul class="footer-nav">
+		<li class="footer-nav__item">
+			<a class="footer_menu_link" href="index.html">HOME</a>
+		</li>
+		<li class="footer-nav__item">
+			<a class="footer_menu_link" href="Portfolio.html">PORTFOLIO</a>
+		</li>
+		<li class="footer-nav__item">
+			<a class="footer-nav__link" href="gallery.html">GUESTBOOK</a>
+		</li>
+	</ul>
+  </div>
 
-    <form>
+  <div class="section_socials">
+	<h4>Follow Us</h4>
+	<div class="social">
+
+		<ul>
+			<a class="fab fa-2x fa-facebook-f" href="https://www.facebook.com/nicgdes/"></a>
+			<a class="fab fa-2x fa-instagram" href="https://www.instagram.com/nicgdes/"></a>
+			<a class="fab fa-2x fa-twitter" href="https://twitter.com/nicgdes"></a>
+		</ul>
+		 </div>
+	</div>
 
 
-    </form>
+	<div class="section_subscribe">
+		   <h4>Subscribe to our Newsletter</h4>
+
+				<!-- Begin Mailchimp Signup Form -->
+
+				<div id="mc_embed_signup">
+				<form action="https://nic.us15.list-manage.com/subscribe/post?u=1628370c9c768e89370a304a8&amp;id=5a2fcc1521" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<!-- <div id="mc_embed_signup_scroll">
+					<label for="mce-EMAIL">Subscribe</label> -->
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1628370c9c768e89370a304a8_5a2fcc1521" tabindex="-1" value=""></div>
+					<div class="clear">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button--hoverinverseskew button__nocolor button__nocolor--blue"></div>
+					</div>
+	</div>
+				</form>
+
+
+	<div class="copyright">
+		<p>Copyright &copy; 2019 North Idaho College Graphic Design Students</p>
+	</div>
+
+
 </footer>
 
 <!-- FOOTER ENDS -->
-    
+<script>
+	function init() {
+// Start Mobile Hero Image Slider
+     var imageTotal = 0;
+     imageSlider();
+
+     function imageSlider() {
+       var images = document.getElementsByClassName("hero-image__mobile--slider");
+       for (var i = 0; i < images.length; i++) {
+         images[i].style.display = "none";
+       }
+      imageTotal++;
+      if (imageTotal > images.length) { imageTotal = 1
+      }
+      images[imageTotal - 1].style.display = "block";
+      setTimeout (imageSlider, 2000);
+     }
+// End Mobile Hero Image Slider
+
+  };
+
+  window.onload = init;
+  </script>
 </body>
 </html>

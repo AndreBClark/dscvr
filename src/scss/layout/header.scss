@@ -1,0 +1,133 @@
+$h1: calc(3vw + 2em);
+$h2: calc(2vw + 1em);
+$h3: calc(1.5vw + 1em);
+$h4: calc(1vw + 1em);
+$h5: calc(.5vw + 1em);
+
+/* Mobile nav logo and hamburger icon styling */
+
+.nav-mobile {
+	display: flex;
+	flex-direction: column;
+	box-shadow : 5px 5px 5px #ccc;
+	transition : .5s all;
+	text-align : center;
+	font-size  : $h4;
+	font-weight: 700;
+
+	&__navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo img {
+		width: 100%;
+		height: auto;
+		max-height: 100px;
+	}
+
+
+	&__hamburger {
+		color: #000;
+		padding: 0 1em;
+	}
+
+}
+
+.nav-desktop {
+	&__list {
+		display: none;
+	}
+}
+/* Hide mobile nav menu */
+#mobileMenu {
+	display: none;
+}
+
+/* Main nav styling and animation  */
+
+.nav-link {
+	font-size: $h1;
+	color           : $color-dark;
+	text-decoration : none;
+	transition      : .5s color;
+	&:hover {
+		color: inherit;
+	}
+}
+
+.mobile-menu{
+	height: calc(100vh - 88px);
+	width: 100%;
+	position: fixed;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: #fff;
+	& li {
+		padding: 1em 0;
+		background: img('branding/stripes.svg') no-repeat;
+		background-size: contain;
+	}
+}
+
+
+@media only screen and (min-width: 769px) {
+	/* Hide hamburger menu icon */
+	#hamburger {
+		display: none;
+	}
+
+	.nav-desktop {
+		text-align : center;
+		font-size  : $h5;
+
+		&__list {
+			display: flex;
+			justify-content: space-around;
+		}
+	}
+
+
+	.nav-link {
+		position: relative;
+		display: inline-block;
+		font-size: $h5;
+		font-weight: 700;
+		padding: 0 1em;
+		color           : $color-dark;
+		text-decoration : none;
+		transition      : .5s color;
+
+		&:after {
+			background: none repeat scroll 0 0 transparent;
+			bottom: 0;
+			content: "";
+			display: block;
+			height: .25em;
+			width: 0;
+			left: 0;
+			position: absolute;
+			background: #fff;
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		}
+
+
+		&--primary:after {
+			background : $color-primary;
+		}
+
+		&--secondary:after {
+			background : $color-secondary;
+		}
+
+		&--tertiary:after {
+			background : $color-tertiary;
+		}
+
+		&:hover:after, &:active:after {
+			left  : 0;
+			width : 100%;
+		}
+	}
+}
