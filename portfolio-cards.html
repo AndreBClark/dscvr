@@ -30,20 +30,15 @@ function init() {
     }
 
 function slideshow(eventObj){
-  var currentPortfolioLB = target.eventObj;
-  thumb_img.innerhtml = currentPortfolioLB.innerhtml;
+
+  var currentPortfolioLB = eventObj.target;
+
+  var source_thumb_img = document.portfolioGallery;
+  source_thumb_img[0].innerHTML = currentPortfolioLB.innerHTML;
+
+  var target_thumb_img = document.getElementsByClassName('target_thumb_img');
+  target_thumb_img[0].innerHTML = source_thumb_img[0].innerHTML;
 }
-
-    // CHANGES TO MAKE:
-    // add eventObj to function, define as targeted Click
-    // run function within function, click takes on EventObj, opens lightbox, run individual gallery function
-    // onclick.slideshow(eventObj){
-    //   currentPortfolioLB = target.eventobject;
-    //   thumb_img.innerhtml = currentPortfolioLB.innerhtml
-    // }
-
-
-
 
 
 var closeTab = document.getElementById('lightbox_closeout')
@@ -514,12 +509,12 @@ Suelynn Parker
 
   <div class="lightbox_images">
       <span id="lightbox_closeout" class="#">close</span>
-    <div class="main_img">
+    <div class="main_img" id="main_img">
       <img class="" src="" alt="" />
 
     </div>
 
-    <ul class="thumb_img">
+    <ul class="target_thumb_img">
         <li><img class="testimg" src="" /></li>
         <li><img class="testimg" src="" /></li>
         <li><img class="testimg" src="" alt="Spiff poster." /></li>

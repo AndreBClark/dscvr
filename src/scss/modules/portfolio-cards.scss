@@ -205,21 +205,21 @@ ul.portfolio-content {
   background-color: black;
 }
 
-ul.thumb_img{
+ul.target_thumb_img{
   display: flex;
   justify-content: space-around;
   margin: 10px 0;
   align-content: space-around;
 }
 
-.thumb_img li{
+.target_thumb_img li{
   display: flex;
   justify-content: space-around;
   flex: 0 1 100px;
   background-color: black;
 }
 
-.thumb_img li img{
+.target_thumb_img li img{
   flex: 0 1 100px;
   height: 100px;
   object-fit: cover;
