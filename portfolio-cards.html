@@ -22,22 +22,26 @@ function init() {
   //       document.getElementById('lightbox').className = 'openLightbox';});
   //   }
 
-  var myList = document.getElementsByTagName('ul');
+  var unorderedList = document.getElementsByTagName('ul');
     for (var i = 0; i < 14 ; i++){
-      myList[i].addEventListener('click', function(){
-        document.getElementById('lightbox').className = 'openLightbox';
-        slideshow();});
+      unorderedList[i].addEventListener('click', openLB);
+      unorderedList[i].addEventListener('click', slideshow, true);
     }
 
-function slideshow(eventObj){
 
-  var currentPortfolioLB = eventObj.target;
+    function openLB() {
+        document.getElementById('lightbox').className = 'openLightbox';
 
-  var source_thumb_img = document.portfolioGallery;
-  source_thumb_img[0].innerHTML = currentPortfolioLB.innerHTML;
+    }
+
+function slideshow(){
+
+  currentPortfolioLB = this.innerHTML;
+  // var source_thumb_img = portfolioGallery;
+  // source_thumb_img[0].innerHTML = currentPortfolioLB.innerHTML;
 
   var target_thumb_img = document.getElementsByClassName('target_thumb_img');
-  target_thumb_img[0].innerHTML = source_thumb_img[0].innerHTML;
+  target_thumb_img[0].innerHTML = currentPortfolioLB;
 }
 
 
