@@ -116,16 +116,25 @@
 	<?php } ?>
 </table>
 
+
+
 	<p><span class="error">*</span></p>
 	<form method="post" action="server.php" >
 		<input type="hidden" name="id" value="<?php echo $id; ?>">
 		<div class="input-group name_field">
-			<label>Name</label>
-			<input type="text" name="name" value="<?php echo $name; ?>">
+			<label>First Name</label>
+			<input type="text" name="first name" value="<?php echo $first_name; ?>">
+			<span class="error">* </span>
 		</div>
-		<div class="input-group message">
+		<div class="input-group name_field">
+			<label>Last Name</label>
+			<input type="text" name="last name" value="<?php echo $last_name; ?>">
+			<span class="error">* </span>
+		</div>
+		<div class="input-group message_field">
 			<label>Message</label>
 			<input type="text" name="message" value="<?php echo $message; ?>">
+			<span class="error">* </span>
 		</div>
 		<div class="input-group">
 			<?php if ($update == true): ?>

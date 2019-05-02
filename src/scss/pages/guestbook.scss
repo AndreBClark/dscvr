@@ -31,7 +31,15 @@ form {
 }
 
 .input-group {
-    margin: 10px 0px 10px 0px;
+    margin: 0;
+}
+
+.name_field{
+  flex: 1 1 45%;
+}
+
+.message_field{
+  flex: 1 1 90%;
 }
 .input-group label {
     display: block;
