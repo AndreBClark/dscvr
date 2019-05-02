@@ -42,7 +42,7 @@ function slideshow(){
   target_thumb_img[0].innerHTML = source_thumb_img;
 
   mainLbImage();
-
+  lbThumbnailControls();
 }
 
 function mainLbImage(){
@@ -53,7 +53,17 @@ function mainLbImage(){
 }
 
 function lbThumbnailControls() {
+  // makes each lightbox thumbnail image transfer to main image on click
+  var mainImgLB = document.getElementById('main_img');
+  var target_thumb_img = document.getElementsByClassName('target_thumb_img');
+  var target_thumb_li = target_thumb_img[0].children;
 
+  for (var i = 0; i < target_thumb_li.length; i++) {
+    target_thumb_li[i].addEventListener('click', function thumbControls(){
+      mainImgLB.innerHTML = this.innerHTML;
+    });
+
+  }
 
 }
 
