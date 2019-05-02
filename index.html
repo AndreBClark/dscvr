@@ -182,6 +182,29 @@
 <!-- FOOTER ENDS -->
 <script>
 	function init() {
+		var menuDropdownList = document.getElementById('mobileMenu');
+		var hamburgerMenu = document.getElementById('hamburger');
+		var menuDropdownList = document.getElementById('mobileMenu'); //targets ul with menu a tags
+		function menuClick() {
+			var hamburgerMenu = document.getElementById('hamburger'); //targets mobile hamburger menu icon
+			hamburgerMenu.onclick = showMenu;  //sets onclick listening to mobile hamburger menu
+
+			var showWebsite = document.getElementsByTagName('body');
+			// var w = window.clientWidth;
+		}
+
+		function showMenu() {
+			//mobile menu toggle
+			if (menuDropdownList.style.display === 'flex' ) {
+				menuDropdownList.style.display = 'none';
+			}
+			else {
+				menuDropdownList.style.display = 'flex';
+
+			}
+		}
+
+			menuClick();
 // Start Mobile Hero Image Slider
      var imageTotal = 0;
      imageSlider();
