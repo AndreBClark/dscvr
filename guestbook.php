@@ -8,8 +8,9 @@
 
 		if (count($record) == 1 ) {
 			$n = mysqli_fetch_array($record);
-			$name = $n['name'];
-			$address = $n['address'];
+			$first_name = $n['firstName'];
+			$last_name = $n['lastName'];
+			$message = $n['message'];
 		}
 	}
 ?>
@@ -95,16 +96,16 @@
 <table>
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Address</th>
-			<th colspan="2">Action</th>
+			<th colspan="2">Name</th>
+			<th colspan="2">Message</th>
 		</tr>
 	</thead>
 
 	<?php while ($row = mysqli_fetch_array($results)) { ?>
 		<tr>
-			<td><?php echo $row['name']; ?></td>
-			<td><?php echo $row['address']; ?></td>
+			<td><?php echo $row['firstName']; ?></td>
+			<td><?php echo $row['lastName']; ?></td>
+			<td><?php echo $row['message']; ?></td>
 			<td>
 				<a href="index.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
 			</td>
@@ -115,27 +116,31 @@
 	<?php } ?>
 </table>
 
+	<p><span class="error">*</span></p>
 	<form method="post" action="server.php" >
 		<input type="hidden" name="id" value="<?php echo $id; ?>">
-		<div class="input-group">
+		<div class="input-group name_field">
 			<label>Name</label>
 			<input type="text" name="name" value="<?php echo $name; ?>">
 		</div>
-		<div class="input-group">
-			<label>Address</label>
-			<input type="text" name="address" value="<?php echo $address; ?>">
+		<div class="input-group message">
+			<label>Message</label>
+			<input type="text" name="message" value="<?php echo $message; ?>">
 		</div>
 		<div class="input-group">
 			<?php if ($update == true): ?>
 	<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
 <?php else: ?>
-	<button class="btn" type="submit" name="save" >Save</button>
+	<button class="btn button button-hoverskew button__nocolor-blue" type="submit" name="save" >Save</button>
 <?php endif ?>
 		</div>
 	</form>
 
-
-
+<?php
+	echo $first_name;
+	echo $last_name;
+	echo $message;
+?>
 
 
 
