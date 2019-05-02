@@ -15,16 +15,19 @@
 .mc-field-group {
   margin-top: 30px;
 }
-
-.content__gdpr .marketing-header {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.content__gdpr .checkbox.subfield {
-  display: inline;
-  margin: 0 auto;
+.content__gdpr {
+	text-align: center;
+	color: $color-gray;
+	font-size: 12px;
+ 	& .marketing-header {
+  		margin-top: 40px;
+  		text-align: center;
+  		font-size: 1.5em;
+	}
+	& .checkbox.subfield {
+	  display: inline;
+	  margin: 0 auto;
+	}
 }
 
 .content__gdprLegal a {
@@ -53,6 +56,8 @@
 
 .content__gdprLegal .unsubscribe, a {
   font-size: 12px;
+  text-align: center;
+  color: $color-gray
 }
 
 .clear {
