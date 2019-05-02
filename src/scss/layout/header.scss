@@ -22,7 +22,7 @@ $h5: calc(.5vw + 1em);
 	}
 
 	&__logo img {
-		width: 100%;
+		width: auto;
 		height: auto;
 		max-height: 100px;
 	}
@@ -59,6 +59,7 @@ $h5: calc(.5vw + 1em);
 
 .mobile-menu{
 	height: calc(100vh - 88px);
+	z-index: 10;
 	width: 100%;
 	position: fixed;
 	flex-direction: column;

@@ -3,7 +3,7 @@
 body {
 font-size: 16px;
 // font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1920 - 300)));
-font-size: calc(1em + 1vmin);
+
 
     font-family: $font-sans-serif;
 }
@@ -15,10 +15,10 @@ font-size: calc(1em + 1vmin);
 }
 
 a {
-	text-decoration: underline;
+	color: $color-gray-dark;
     &:focus,
     &:hover {
-
+		color: $color-primary-dark;
     }
 }
 
