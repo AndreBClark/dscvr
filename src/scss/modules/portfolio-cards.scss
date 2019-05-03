@@ -25,7 +25,7 @@
 .wrapper--alignleft {
 display: flex;
 flex: 1;
-width: 80%;
+width: 90%;
 height: 100%;
 align-content: center;
 flex-wrap: wrap;
@@ -35,7 +35,7 @@ flex-wrap: wrap;
 .wrapper--alignright {
 display: flex;
 flex: 1;
-width: 80%;
+width: 90%;
 height: 100%;
 justify-content: flex-end;
 align-content: center;
@@ -91,8 +91,8 @@ ul.portfolio-content {
 
 
 .portfolio-content img {
-  max-height: 100px;
-  max-width: 100px;
+  max-height: 80px;
+  max-width: 80px;
   object-fit: cover;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -101,64 +101,6 @@ ul.portfolio-content {
   transition: 0.5s linear;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
-
-
-
-// MEDIA QUERY FOR TABLET SIZE
-@media only screen and (min-width: 500px) {
-    .social-wrapper {
-      display: flex;
-      align-content: center;
-      width: 350px;
-    }
-
-    .social-wrapper p {
-      margin-top: 4px;
-      margin-right: 20px;
-    }
-
-
-  .wrapper--alignleft {
-  align-content: center;
-  justify-content: center;
-
-
-  }
-  .wrapper--alignright {
-  justify-content: center;
-  align-content: center;
-
-  }
-
-
-}
-
-// MEDIA QUERY FOR DESKTOP
-@media only screen and (min-width: 1265px) {
-
-  .portfolio-content__wrapper {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .wrapper--alignleft {
-  height: 600px;
-
-  }
-  .wrapper--alignright {
-  height: 600px;
-  }
-
-  .portfolio-content img {
-    display: flex;
-    max-width: 150px;
-    max-height: 150px;
-  }
-}
-
 
 // Styling for lightbox elements
 
@@ -224,4 +166,71 @@ ul.target_thumb_img{
   flex: 0 1 100px;
   height: 100px;
   object-fit: cover;
+}
+
+
+
+
+
+// MEDIA QUERY FOR TABLET SIZE
+@media only screen and (min-width: 500px) {
+    .social-wrapper {
+      display: flex;
+      align-content: center;
+      width: 350px;
+    }
+
+    .social-wrapper p {
+      margin-top: 4px;
+      margin-right: 20px;
+    }
+
+
+  .wrapper--alignleft {
+  align-content: center;
+  justify-content: center;
+
+
+  }
+  .wrapper--alignright {
+  justify-content: center;
+  align-content: center;
+
+  }
+
+
+}
+
+// MEDIA QUERY FOR DESKTOP
+@media only screen and (min-width: 1265px) {
+
+  .portfolio-content__wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .wrapper--alignleft {
+  height: 600px;
+
+  }
+  .wrapper--alignright {
+  height: 600px;
+  }
+
+  .portfolio-content img {
+    display: flex;
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+// MEDIA QUERY FOR iphone 5s
+@media only screen and (max-width: 360px) {
+
+.portfolio-content img {
+max-width: 60px;
+}
+
 }
