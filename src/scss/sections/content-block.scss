@@ -11,3 +11,11 @@
 		display: flex;
 	}
 }
+
+@media only screen and (max-width: 1000px) {
+  body {
+    .content-block {
+			display:block;
+		}
+  }
+}
