@@ -62,8 +62,20 @@ $h5: calc(.5vw + 1em);
 	}
 }
 
-
-
+.mobile-menu{
+	height: calc(100vh - 88px);
+	z-index: 10;
+	width: 100%;
+	position: fixed;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: #fff;
+	& li {
+		padding: 1em 0;
+		background: img('branding/stripes.svg') no-repeat;
+		background-size: contain;
+	}
+}
 
 
 @media only screen and (min-width: 769px) {
@@ -81,6 +93,7 @@ $h5: calc(.5vw + 1em);
 			justify-content: space-around;
 		}
 	}
+
 
 	.nav-link {
 		position: relative;
@@ -101,7 +114,7 @@ $h5: calc(.5vw + 1em);
 			width: 0;
 			left: 0;
 			position: absolute;
-			// background: #fff;
+			background: #fff;
 			transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		}
 
@@ -118,19 +131,9 @@ $h5: calc(.5vw + 1em);
 			background : $color-tertiary;
 		}
 
-		&--success:after {
-			background : $color-success;
-		}
-
-		&--purple:after {
-			background : $color-royalpurple;
-		}
-
 		&:hover:after, &:active:after {
 			left  : 0;
 			width : 100%;
 		}
 	}
-
-
 }
