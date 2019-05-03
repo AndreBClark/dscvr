@@ -84,15 +84,15 @@
 	    background : $color-secondary;
 	  }
 
-	  &--success:after {
+	  &--tertiary:after {
+	    background : $color-tertiary;
+	  }
+
+    &--success:after {
 	    background : $color-success-dark;
 	  }
 
     &--purple:after {
-	    background : $color-success-dark;
-	  }
-
-    &--purplse:after {
 	    background : $color-purple;
 	  }
 
