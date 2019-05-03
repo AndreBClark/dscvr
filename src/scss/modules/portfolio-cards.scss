@@ -122,8 +122,8 @@ ul.portfolio-content {
 
 #lightbox_closeout{
   color: white;
-  position: absolute;
-  top: 80px;
+  position: relative;
+  top: 0px;
   right: 0px;
   font-size: 1.5em;
   margin-bottom: 10px;
@@ -135,6 +135,8 @@ ul.portfolio-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  max-width: 85%;
   position: relative;
   margin: 0 auto;
   text-align: center;
@@ -145,8 +147,9 @@ ul.portfolio-content {
   max-width: 450px;
   min-width: 300px;
   object-fit: contain;
-  background-color: black;
 }
+
+
 
 ul.target_thumb_img{
   display: flex;
@@ -159,7 +162,6 @@ ul.target_thumb_img{
   display: flex;
   justify-content: space-around;
   flex: 0 1 100px;
-  background-color: black;
 }
 
 .target_thumb_img li img{
@@ -226,11 +228,19 @@ ul.target_thumb_img{
   }
 }
 
+.lightbox_images{
+  max-width: 90%;
+}
+
 // MEDIA QUERY FOR iphone 5s
 @media only screen and (max-width: 360px) {
 
 .portfolio-content img {
 max-width: 60px;
+}
+
+.main_img img {
+  max-width: 75%;
 }
 
 }
