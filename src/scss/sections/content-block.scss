@@ -1,3 +1,6 @@
+.top {
+	margin-top: 100px;
+}
 .content-block {
 	margin: 2em auto;
 	width: 90vw;
@@ -16,6 +19,7 @@
   body {
     .content-block {
 			display:block;
+			max-width: 100%;
 		}
   }
 }

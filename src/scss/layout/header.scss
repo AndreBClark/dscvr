@@ -8,6 +8,11 @@ $h5: calc(.5vw + 1em);
 
 .nav-mobile {
 	display: flex;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+	background: #fff;
 	flex-direction: column;
 	box-shadow : 5px 5px 5px #ccc;
 	transition : .5s all;
