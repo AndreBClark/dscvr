@@ -1,3 +1,6 @@
+.top {
+	margin-top: 100px;
+}
 .content-block {
 	margin: 2em auto;
 	width: 90vw;
@@ -15,7 +18,9 @@
 @media only screen and (max-width: 1000px) {
   body {
     .content-block {
+			margin: 0;
 			display:block;
+			max-width: 100%;
 		}
   }
 }
