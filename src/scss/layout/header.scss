@@ -109,7 +109,7 @@ $h5: calc(.5vw + 1em);
 	    width : 100%;
 	  }
 	}
-}
+
 
 
 @media only screen and (min-width: 769px) {
@@ -128,46 +128,47 @@ $h5: calc(.5vw + 1em);
 		}
 	}
 
+	.nav-link {
+		position: relative;
+		display: inline-block;
+		font-size: $h5;
+		font-weight: 700;
+		padding: 0 1em;
+		color           : $color-dark;
+		text-decoration : none;
+		transition      : .5s color;
 
-	// .nav-link {
-	// 	position: relative;
-	// 	display: inline-block;
-	// 	font-size: $h5;
-	// 	font-weight: 700;
-	// 	padding: 0 1em;
-	// 	color           : $color-dark;
-	// 	text-decoration : none;
-	// 	transition      : .5s color;
-	//
-	// 	&:after {
-	// 		background: none repeat scroll 0 0 transparent;
-	// 		bottom: 0;
-	// 		content: "";
-	// 		display: block;
-	// 		height: .25em;
-	// 		width: 0;
-	// 		left: 0;
-	// 		position: absolute;
-	// 		background: #fff;
-	// 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
-	// 	}
-	//
-	//
-	// 	&--primary:after {
-	// 		background : $color-primary;
-	// 	}
-	//
-	// 	&--secondary:after {
-	// 		background : $color-secondary;
-	// 	}
-	//
-	// 	&--tertiary:after {
-	// 		background : $color-tertiary;
-	// 	}
-	//
-	// 	&:hover:after, &:active:after {
-	// 		left  : 0;
-	// 		width : 100%;
-	// 	}
-	// }
+		&:after {
+			background: none repeat scroll 0 0 transparent;
+			bottom: 0;
+			content: "";
+			display: block;
+			height: .25em;
+			width: 0;
+			left: 0;
+			position: absolute;
+			background: #fff;
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		}
+
+
+		&--primary:after {
+			background : $color-primary;
+		}
+
+		&--secondary:after {
+			background : $color-secondary;
+		}
+
+		&--tertiary:after {
+			background : $color-tertiary;
+		}
+
+		&:hover:after, &:active:after {
+			left  : 0;
+			width : 100%;
+		}
+	}
+
+
 }
