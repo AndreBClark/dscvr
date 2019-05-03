@@ -118,7 +118,7 @@ ul.portfolio-content {
   width: 100%;
   position: fixed;
   z-index: 1;
-  height: 100%;
+  height: 80%;
 
 }
 
@@ -221,6 +221,11 @@ ul.target_thumb_img{
 
 // MEDIA QUERY FOR DESKTOP
 @media only screen and (min-width: 1265px) {
+
+  .openLightbox{
+    height: 100%;
+
+  }
 
 .portfolio-card__container {
 
