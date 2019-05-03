@@ -10,8 +10,8 @@
 	@return url('../fonts/' + $url);
 }
 
-@function img($url) {
-	@return url('../img/' + $url);
+@function image-url($url) {
+	@return url('../images/' + $url);
 }
 
 $slick-arrow-color: black !default;

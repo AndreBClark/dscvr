@@ -1,5 +1,6 @@
 footer {
     background-color: $color-primary;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -35,14 +36,11 @@ ul {
   display: flex;
   flex-direction: row;
   text-align: center;
-  justify-content: space-around;
 }
 
-
 .footer-nav__item{
-  padding: 0 1em;
+  padding: 0 20px 0 20px;
   margin: auto;
-  justify-content: space-around;
 }
 
 a{
@@ -50,7 +48,7 @@ a{
 }
 
 a.fab {
-	padding: 0 1.2em;
+	padding: 0 1.5em;
 }
 
 .social {
@@ -59,31 +57,9 @@ a.fab {
     justify-content: space-around;
 }
 
-#mc-embedded-subscribe-form{
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 auto;
-  justify-content: space-around;
-}
-
-#mc-embedded-subscribe{
-  width: auto;
-  margin: 0 auto;
-}
-
 form {
     display: flex;
-    padding: 20px auto;
 
-}
-
-.email{
-  text-align: center;
-  // margin: 0px 10px 16px 10px;
-  flex: 1 0 150px;
-}
-form .clear{
-  flex: 0 1 auto;
 }
 
 .button {
@@ -92,15 +68,4 @@ form .clear{
 
 .copyright{
   font-size: smaller;
-  text-align: center;
-  padding: 0 10px;
-}
-@media (max-width: 769px) {
-  .footer-nav {
-    display: block;
-  }
-
-  a.fab {
-  	padding: 0 .5em;
-  }
 }
