@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./dist/css/app.css">
+    <title>DSCVR: Portfolio</title>
+
+<script>
+
+function init() {
+  // targets ul that holds each student's three portfolio pieces
+  var portfolioGallery = document.getElementsByClassName('portfolio-content');
+
+  var studentCard = document.getElementsByClassName('studentCard');
+  var portfolioContentBlock = document.getElementsByClassName('portfolio-content__wrapper');
+
+  // var myList = document.getElementsByTagName('ul');
+  //   for (var i = 0; i < 14 ; i++){
+  //     myList[i].addEventListener('click', function(){
+  //       document.getElementById('lightbox').className = 'openLightbox';});
+  //   }
+
+  var unorderedList = document.getElementsByTagName('ul');
+    for (var i = 0; i < 14 ; i++){
+      unorderedList[i].addEventListener('click', openLB);
+      unorderedList[i].addEventListener('click', slideshow, true);
+    }
+
+
+    function openLB() {
+        document.getElementById('lightbox').className = 'openLightbox';
+
+    }
+
+function slideshow(){
+// Grabs the clicked on ul and passes its li to lightbox's ul
+  var source_thumb_img = this.innerHTML;
+  // var currentSelectedImage = this[0].innerHTML;
+  var target_thumb_img = document.getElementsByClassName('target_thumb_img');
+  target_thumb_img[0].innerHTML = source_thumb_img;
+
+  mainLbImage();
+  lbThumbnailControls();
+}
+
+function mainLbImage(){
+  // inserts first li of lightbox into main image
+  var mainImgLB = document.getElementById('main_img');
+  var target_thumb_img = document.getElementsByClassName('target_thumb_img');
+   mainImgLB.innerHTML = target_thumb_img[0].firstElementChild.innerHTML;
+}
+
+function lbThumbnailControls() {
+  // makes each lightbox thumbnail image transfer to main image on click
+  var mainImgLB = document.getElementById('main_img');
+  var target_thumb_img = document.getElementsByClassName('target_thumb_img');
+  var target_thumb_li = target_thumb_img[0].children;
+
+  for (var i = 0; i < target_thumb_li.length; i++) {
+    target_thumb_li[i].addEventListener('click', function thumbControls(){
+      mainImgLB.innerHTML = this.innerHTML;
+    });
+
+  }
+
+}
+
+
+var closeTab = document.getElementById('lightbox_closeout')
+closeTab.addEventListener('click', function(){document.getElementById('lightbox').className = 'closeLightbox';});
+
+
+};
+
+
+window.onload = init;
+
+ </script>
+
+
+</head>
+<body>
+  <h1>PORTFOLIO</h1>
+  <!-- overall container encompassing all cards  -->
+  <section class="portfolio-card__container">
+<!-- .wrapper is sub-container that emcompasses all cards  -->
+<div class="portfolio-wrapper">
+
+
+<!-- Lydia's card start -->
+    <div class="wrapper--alignleft">
+      <div class="studentCard card">
+	      <img src="dist/img/portfolio/web-illustration-large-lydia.png">
+
+       <h2 class="student-name">
+        Lydia Ramus
+      </h2>
+      </div>
+
+
+      <div class="portfolio-content__wrapper">
+      <div class="social-wrapper">
+      <!-- <p class="designer-name"></p> -->
+      <!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span> -->
+      <!-- <span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span>
+      <span><a href="#"><i class="fab fa-2x fa-instagram"></i></a></span> -->
+      <!-- <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span> -->
+
+      </div>
+
+      <p>I have always been drawn to writing and the immersive art of storytelling. Great design tells a story of its own, and I love trying to capture that in its visual form.</p>
+
+        <ul class="portfolio-content">
+          <li class="nav-link nav-link--success"><img src="dist/img/lydia-ramus/inlander.png" alt="Inlander cover, camp edition, by Lydia Ramus." /></li>
+          <li class="nav-link nav-link--success"><img src="dist/img/lydia-ramus/portfolio_menu.png" alt="Restaurant menu by Lydia Ramus." /></li>
+          <li class="nav-link nav-link--success"><img src="dist/img/lydia-ramus/solstice_invite.png" alt="Winter Solstice event invitation by Lydia Ramus." /></li>
+        </ul>
+
+      </div>
+  </div>
+    <!-- Lydia's card ends  -->
+
+    <!-- Emma's card starts  -->
+    <div class="wrapper--alignright">
+
+      <div class="portfolio-content__wrapper">
+        <div class="social-wrapper">
+        <p class="designer-name">Tin Fish Design</p>
+        <span><a href="https://www.facebook.com/Tin-Fish-Design-381265962413198/" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></span>
+        <span><a href="https://www.instagram.com/tinfishdesign/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></span>
+        <span><a href="https://twitter.com/TinFishDesign?lang=en" target="_blank"><i class="fab fa-2x fa-twitter"></i></a></span>
+        <!-- <span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span> -->
+        </div>
+
+        <p>From illustrations to layouts, refinement to building, I usually start with rough sketches for everything. I'm looking to hone my skills and do something more meaningful with my artistic ability.</p>
+
+        <ul class="portfolio-content">
+          <li class="nav-link nav-link--purple"><img src="dist/img/emma-castleberry/Cold_November-web.png" alt="Vector Illustration Movie Poster by Emma Castleberry." /></li>
+          <li class="nav-link nav-link--purple"><img src="dist/img/emma-castleberry/Cthulhu_BookCover-web.png" alt="Book cover of a Cthulhu by Emma Castleberry." /></li>
+          <li class="nav-link nav-link--purple"><img src="dist/img/emma-castleberry/MessagesThatMatter.png" alt="Communications 101 Textbook Cover by Emma Castleberry." /></li>
+        </ul>
+
+      </div>
+
+    <div class="studentCard card">
+    <img src="dist/img/portfolio/web-illustration-large-emma.png">
+
+         <h2 class="student-name">
+           Emma Castleberry
+         </h2>
+      </div>
+
+
+    </div>
+      <!-- Emma's card ends  -->
+
+      <!-- Joe's card start -->
+<div class="wrapper--alignleft">
+  <div class="studentCard card">
+    <img src="dist/img/portfolio/web-illustration-large-joe.png">
+
+<h2 class="student-name">
+Joe Click
+</h2>
+  </div>
+
+<div class="portfolio-content__wrapper">
+<div class="social-wrapper">
+<!-- <p class="designer-name"></p> -->
+<!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span> -->
+<span><a href="https://www.instagram.com/josephclick/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></span>
+<!-- <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span>
+<span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span> -->
+</div>
+
+<p>I enjoy creating illustrations & concept designs. I am inspired by designs that break outside the box of normal conventions.</p>
+
+<ul class="portfolio-content">
+<li class="nav-link nav-link--purple"><img src="dist/img/joe-click/JC_Poetry_Night.png" alt="Poetry night poster by Joseph Click." /></li>
+<li class="nav-link nav-link--purple"><img src="dist/img/joe-click/JC_Preeflight.png" alt="Preflight event poster by Joseph Click." /></li>
+<li class="nav-link nav-link--purple"><img src="dist/img/joe-click/JC_Stencil_portrate.png" alt="Vector drawing of a woman's portrait by Joseph Click." /></li>
+</ul>
+
+</div>
+</div>
+<!-- Joe's card ends  -->
+
+<!-- Danielle's card starts  -->
+<div class="wrapper--alignright">
+
+<div class="portfolio-content__wrapper">
+<div class="social-wrapper">
+<p class="designer-name">Prochaska Creative</p>
+<!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span> -->
+<span><a href="https://www.behance.net/danielleprochaska" target="_blank"><i class="fas fa-2x fa-globe"></i></a></span>
+<span><a href="https://www.instagram.com/prochaskacreative/" target="_blank" ><i class="fab fa-2x fa-instagram"></i></a></span>
+<!-- <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span> -->
+
+</div>
+
+<p>When designing, I don't allow any limitations; I allow my mind to be completely free to wander and explore different ideas. This allows me to invent unique designs that will tell stories or evoke raw emotions.</p>
+
+<ul class="portfolio-content">
+<li class="nav-link nav-link--success"><img src="dist/img/danielle-prochaska/preflight-2019-danielle-prochaska.png" alt="Preflight Poster by Danielle Prochaska." /></li>
+<li class="nav-link nav-link--success"><img src="dist/img/danielle-prochaska/prochaska-creative-logo.png" alt="Prochaska Creative logo by Danielle Prochaska." /></li>
+<li class="nav-link nav-link--success"><img src="dist/img/danielle-prochaska/urbanity-branding.png" alt="Urbanity Branding by Danielle Prochaska." /></li>
+</ul>
+
+</div>
+
+<div class="studentCard card">
+<img src="dist/img/portfolio/web-illustration-large-danielle.png" />
+
+<h2 class="student-name">
+Danielle Prochaska
+</h2>
+</div>
+
+
+</div>
+<!-- Danielle's card ends  -->
+
+<!-- Karey's card start -->
+<div class="wrapper--alignleft">
+<div class="studentCard card">
+<img src="dist/img/portfolio/web-illustration-large-karey.png" />
+
+<h2 class="student-name">
+Karey Stivers
+</h2>
+</div>
+
+<div class="portfolio-content__wrapper">
+<div class="social-wrapper">
+<p class="designer-name">Katalist Innovations</p>
+<!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span> -->
+<span><a href="https://katalistinnovations.design/" target="_blank"><i class="fas fa-2x fa-globe"></i></a></span>
+<span><a href="https://www.instagram.com/karey.stivers/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></span>
+<!-- <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span> -->
+
+</div>
+
+<p>Being a designer isn't just about having a career and making money – it's about being the creative person I've always been... I love being the "creative type" that helps others share their message in interesting and beautiful ways...</p>
+
+<ul class="portfolio-content">
+<li class="nav-link nav-link--success"><img src="dist/img/karey-stivers/aa-tokyo-ad-portfolio.png" alt="Destination American Airlines Ad by Karey Stivers." /></li>
+<li class="nav-link nav-link--success"><img src="dist/img/karey-stivers/skiresort-webpage_ks.png" alt="Ski resort homepage by Karey Stivers." /></li>
+<li class="nav-link nav-link--success"><img src="dist/img/karey-stivers/dotkomtea-kspng.png" alt="dotKom Tea product labels by Karey Stivers." /></li>
+
+</ul>
+
+</div>
+</div>
+<!-- Karey's card ends  -->
+
+<!-- Kennedy's card starts  -->
+<div class="wrapper--alignright">
+
+<div class="portfolio-content__wrapper">
+<div class="social-wrapper">
+<!-- <p class="designer-name">Claire Creative</p> -->
+<!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span>
+<span><a href="#"><i class="fab fa-2x fa-instagram"></i></a></span>
+<span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span> -->
+<span><a href="https://kennedypew.myportfolio.com/" target="_blank"><i class="fas fa-2x fa-globe"></i></a></span>
+<span><a href="https://kennedyclairephotography.myportfolio.com/" target="_blank"><i class="fa fa-2x fa-camera" aria-hidden="true"></i></a></span>
+</div>
+
+<p>All of my inspiration comes from the world around me. There are so many opportunities, possibilities, and beauty all around us, and that is the fire that feeds my inspiration.</p>
+
+<ul class="portfolio-content">
+<li class="nav-link nav-link--tertiary"><img src="dist/img/kennedy-pew/inlander.png" alt="Vector illustration Inlander cover by Kennedy Pew." /></li>
+<li class="nav-link nav-link--tertiary"><img src="dist/img/kennedy-pew/mononoke poster.png" alt="Mononoke poster by Kennedy Pew." /></li>
+<li class="nav-link nav-link--tertiary"><img src="dist/img/kennedy-pew/viscomm.png" alt="Viscom Poster by Kennedy Pew." /></li>
+</ul>
+
+</div>
+
+<div class="studentCard card">
+<img src="dist/img/portfolio/web-illustration-large-kennedy.png" />
+
+<h2 class="student-name">
+Kennedy Pew
+</h2>
+</div>
+
+
+</div>
+<!-- Kennedy's card ends  -->
+
+<!-- Suelynn's card start -->
+<div class="wrapper--alignleft">
+<div class="studentCard card">
+<img src="dist/img/portfolio/web-illustration-large-suelynn.png" />
+
+<h2 class="student-name">
+Suelynn Parker
+</h2>
+</div>
+
+<div class="portfolio-content__wrapper">
+<div class="social-wrapper">
+<p class="designer-name">InfiniteParker Designs</p>
+<span><a href="https://www.facebook.com/ipdesigns" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></span>
+<span><a href="https://www.instagram.com/infiniteparkerdesigns/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></span>
+<!-- <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span>
+<span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span> -->
+</div>
+
+<p>I am inspired by animations, video game graphics, magazines, and comic book/novels. Curiosity motivates me to explore new designs and skills and be inspired by other designers and artists.</p>
+
+<ul class="portfolio-content">
+<li class="nav-link nav-link--purple"><img src="dist/img/suelynn-parker/Estate MagAd.jpg" alt="Estate magazine ad by Suelynn Parker." /></li>
+<li class="nav-link nav-link--purple"><img src="dist/img/suelynn-parker/TetTrungThu.jpg" alt="Tet Trung Thu card by Suelynn Parker." /></li>
+<li class="nav-link nav-link--purple"><img src="dist/img/suelynn-parker/Vizzcom.jpg" alt="Viscom poster by Suelynn Parker." /></li>
+</ul>
+
+</div>
+</div>
+<!-- Suelynn's card ends  -->
+
+<!-- Mattea's card starts  -->
+<div class="wrapper--alignright">
+
+<div class="portfolio-content__wrapper">
+<div class="social-wrapper">
+<p class="designer-name">Qadira Graphics</p>
+<!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span> -->
+<span><a href="https://www.instagram.com/qadira_graphics/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></span>
+<!-- <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span>
+<span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span> -->
+</div>
+
+<p>I didn't want to waste any time "getting started" in my career. I have grown so much as an artist, designer, and as a person since I joined the NIC Graphic Design Program.</p>
+
+<ul class="portfolio-content">
+  <li class="nav-link nav-link--primary"><img src="dist/img/mattea-bergland/DuskNightclub.png" alt="Vector Dusk Night Club event poster by Mattea Bergland." /></li>
+  <li class="nav-link nav-link--primary"><img src="dist/img/mattea-bergland/MESSAGESTHATMATTER.png" alt="Communications 101 textbook cover by Mattea Bergland." /></li>
+  <li class="nav-link nav-link--primary"><img src="dist/img/mattea-bergland/sleepy_hollow_final.png" alt="Sleepy Hollow movie poster by Mattea Bergland." /></li>
+</ul>
+
+</div>
+
+<div class="studentCard card">
+<img src="dist/img/portfolio/web-illustration-large-mattea.png" />
+ <h2 class="student-name">
+   Mattea Bergland
+ </h2>
+</div>
+
+
+</div>
+<!-- Mattea's card ends  -->
+
+<!-- Sam's card start -->
+  <div class="wrapper--alignleft">
+  <div class="studentCard card">
+<a><img src="dist/img/portfolio/web-illustration-large-sam.png"></a>
+
+     <h2 class="student-name">
+      Sam Stoke
+    </h2>
+  </div>
+
+  <div class="portfolio-content__wrapper">
+    <div class="social-wrapper">
+    <p class="designer-name">Stoke Design</p>
+    <span><a href="https://www.facebook.com/stokedesign/" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></span>
+    <span><a href="https://www.instagram.com/stokedesigns/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></span>
+    <!-- <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span>
+    <span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span> -->
+    </div>
+
+    <p>I like to do lettering and get inspiration from the web. I would like to work with cool people doing branding and designing for others.</p>
+
+    <ul class="portfolio-content">
+      <li class="nav-link nav-link--primary"><img src="dist/img/sam-stoke/Sam-icecream.jpg" alt="North Idaho Creamery ice cream ad by Sam Stoke." /></li>
+      <li class="nav-link nav-link--primary"><img src="dist/img/sam-stoke/sam-lettering.jpg" alt="Typography poster by Sam Stoke." /></li>
+      <li class="nav-link nav-link--primary"><img src="dist/img/sam-stoke/sam-tattoo-logo.jpg" alt="Tattoo design t-shirt by Sam Stoke." /></li>
+    </ul>
+
+  </div>
+</div>
+  <!-- Sam's card ends  -->
+
+  <!-- Kallie's card starts  -->
+  <div class="wrapper--alignright">
+
+    <div class="portfolio-content__wrapper">
+      <div class="social-wrapper">
+      <!-- <p class="designer-name"></p> -->
+      <!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span>
+      <span><a href="#"><i class="fab fa-2x fa-instagram"></i></a></span>
+      <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span>
+      <span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span> -->
+      </div>
+
+      <p>I would love to work as a Creative Director for a design agency. I had spent the previous 10 years as either a high school teacher, therapeutic wilderness guide, or life coach working with at-risk young adults and adolescents. I jump at the chance of being creative and solving problems, which inspired me to be a graphic designer.</p>
+
+      <ul class="portfolio-content">
+        <li class="nav-link nav-link--secondary"><img src="dist/img/kallie-khademi/Bee_Bee_Cider.jpg" alt="Beebee Cider ad by Kallie Khademi." /></li>
+        <li class="nav-link nav-link--secondary"><img src="dist/img/kallie-khademi/Green_Tea_Matcha.jpg" alt="Green Tea Matcha packaging by Kallie Khademi." /></li>
+        <li class="nav-link nav-link--secondary"><img src="dist/img/kallie-khademi/SPiff_World_Shorts_Khademi.jpg" alt="Spiff World Shorts poster by Kallie Khademi." /></li>
+      </ul>
+
+    </div>
+
+  <div class="studentCard card">
+<img src="dist/img/portfolio/web-illustration-large-kallie.png" />
+
+       <h2 class="student-name">
+         Kallie Khademi
+       </h2>
+    </div>
+
+
+  </div>
+    <!-- Kallie's card ends  -->
+    <!-- Andre's card start -->
+        <div class="wrapper--alignleft">
+        <div class="studentCard card">
+    	<img src="dist/img/portfolio/web-illustration-large-andre.png" />
+           <h2 class="student-name">
+            Andre Clark
+          </h2>
+        </div>
+
+        <div class="portfolio-content__wrapper">
+          <div class="social-wrapper">
+          <p class="designer-name">Cosmic Division</p>
+          <!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span>
+          <span><a href="#"><i class="fab fa-2x fa-instagram"></i></a></span>
+          <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span>
+          <span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span> -->
+          </div>
+
+          <p>I want to be a core member of a talented team working on premium websites. I get creative through my process of listening to loud electric music, and drinking black tea.</p>
+
+          <ul class="portfolio-content">
+            <li class="nav-link nav-link--success"><img src="./src/img/emma-castleberry/Cold_November-web.png" alt="Vector Illustration Movie Poster." /></li>
+            <li class="nav-link nav-link--success"><img src="./src/img/emma-castleberry/Cthulhu_BookCover-web.png" alt="Book cover of a Cthulhu." /></li>
+            <li class="nav-link nav-link--success"><img src="./src/img/emma-castleberry/MessagesThatMatter.png" alt="Communications 101 Textbook Cover." /></li>
+          </ul>
+
+        </div>
+      </div>
+        <!-- Andre's card ends  -->
+
+        <!-- Jonah's card starts  -->
+        <div class="wrapper--alignright">
+
+          <div class="portfolio-content__wrapper">
+            <div class="social-wrapper">
+            <p class="designer-name">Leeder Designs</p>
+            <span><a href="https://www.leederdesigns.com/" target="_blank"><i class="fas fa-2x fa-globe"></i></a></span>
+            <span><a href="https://www.facebook.com/leederdesigns/" target="_blank"><i class="fab fa-2x fa-facebook"></i></a></span>
+            <span><a href="https://www.instagram.com/leederdesigns/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></span>
+            <!-- <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span> -->
+
+            </div>
+
+            <p>I currently work at Anthem Church as a Creative/Production Assistant and apply skills for freelance on the side. I have my design persona, Leeder Designs, designing brands, prints, website, and managing social media.</p>
+
+            <ul class="portfolio-content">
+              <li class="nav-link nav-link--tertiary"><img src="dist/img/jonah-leeder/01_mihara_jzleeder.png" alt="Mihara Law PLLC webpage by Jonah Leeder." /></li>
+              <li class="nav-link nav-link--tertiary"><img src="dist/img/jonah-leeder/02_redemption_jzleeder.png" alt="Redemption t-shirt by Jonah Leeder." /></li>
+              <li class="nav-link nav-link--tertiary"><img src="dist/img/jonah-leeder/03_jesus_jzleeder.png" alt="Jesus Saves guitar strap by Jonah Leeder." /></li>
+            </ul>
+
+          </div>
+
+        <div class="studentCard card">
+        <img src="dist/img/portfolio/web-illustration-large-jonah.png"/>
+
+             <h2 class="student-name">
+               Jonah Leeder
+             </h2>
+          </div>
+
+
+        </div>
+    <!-- Jonah's card ends  -->
+
+    <!-- Rachel's card start -->
+        <div class="wrapper--alignleft">
+        <div class="studentCard card">
+    	<a><img src="dist/img/portfolio/web-illustration-large-rachel.png"></a>
+           <h2 class="student-name">
+            Rachel Adair
+          </h2>
+        </div>
+
+        <div class="portfolio-content__wrapper">
+          <div class="social-wrapper">
+          <!-- <p class="designer-name"></p> -->
+          <!-- <span><a href="#"><i class="fab fa-2x fa-facebook"></i></a></span>
+          <span><a href="#"><i class="fab fa-2x fa-instagram"></i></a></span>
+          <span><a href="#"><i class="fab fa-2x fa-twitter"></i></a></span>
+          <span><a href="#"><i class="fas fa-2x fa-globe"></i></a></span> -->
+          </div>
+
+          <p>I love food & animals, but what I love even more is to travel the world & capture its beauty. I would love to be on a set somewhere making movies and to be in charge of projects and/or helping others create new designs. What helps my creative process is a cup of of coffee, putting on some Queen, and busting a move! </p>
+
+          <ul class="portfolio-content">
+            <li class="nav-link nav-link--secondary"><img src="./src/img/emma-castleberry/Cold_November-web.png" alt="Vector Illustration Movie Poster." /></li>
+            <li class="nav-link nav-link--secondary"><img src="./src/img/emma-castleberry/Cthulhu_BookCover-web.png" alt="Book cover of a Cthulhu." /></li>
+            <li class="nav-link nav-link--secondary"><img src="./src/img/emma-castleberry/MessagesThatMatter.png" alt="Communications 101 Textbook Cover." /></li>
+          </ul>
+
+        </div>
+      </div>
+        <!-- Rachel's card ends  -->
+
+
+</div>
+
+<!-- Code for Lightbox -->
+<div id="lightbox" class="closeLightbox">
+
+
+  <div class="lightbox_images">
+      <span id="lightbox_closeout" class="#">close</span>
+    <div class="main_img" id="main_img">
+      <img class="" src="" alt="" />
+
+    </div>
+
+    <ul class="target_thumb_img">
+        <li><img class="testimg" src="" /></li>
+        <li><img class="testimg" src="" /></li>
+        <li><img class="testimg" src="" alt="Spiff poster." /></li>
+    </ul>
+
+  </div>
+
+
+
+
+
+</div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+</body>
+<html>

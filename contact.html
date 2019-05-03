@@ -9,49 +9,83 @@
 </head>
 
   <body>
-	  <header class="nav-desktop nav-mobile">
-	  	<nav>
-	  		<!-- Mobile Nav header: logo and hamburger menu STARTS -->
-	  		<div class="nav-mobile__navbar">
-	  			<a href="index.html" class="nav-mobile__logo">
-	  				<img id="mobileLogo" src="src/img/branding/dscvr1.5x.png" alt="DSCVR Logo" /></a>
-	  				<nav>
-	  					<ul class="nav-desktop__list">
+	  <script type="text/javascript">
 
-	  						<li class="nav-desktop__item">
-	  							<a class="nav-link nav-link--primary" href="portfolio.html">Portfolio
-	  							</a>
-	  						</li>
-	  					<li  class="nav-desktop__item">
-	  						<a class=" nav-link nav-link--tertiary" href="contact.html">Contact
-	  						</a>
-	  					</li>
-	  				</ul>
-	  			</nav>
-	  			<a id="hamburger"><i  class="fas fa-bars fa-2x nav-mobile__hamburger"></i></a>
-	  		</div>
+	  function init() {
+  		var menuDropdownList = document.getElementById('mobileMenu');
+  		var hamburgerMenu = document.getElementById('hamburger');
+  		var menuDropdownList = document.getElementById('mobileMenu'); //targets ul with menu a tags
+  		function menuClick() {
+  			var hamburgerMenu = document.getElementById('hamburger'); //targets mobile hamburger menu icon
+  			hamburgerMenu.onclick = showMenu;  //sets onclick listening to mobile hamburger menu
 
-	  		<!-- Mobile Nav header: logo and hamburger menu ENDS -->
+  			var showWebsite = document.getElementsByTagName('body');
+  			// var w = window.clientWidth;
+  		}
 
-	  		<ul id="mobileMenu" class="mobile-menu nav-mobile--bg-stripes">
-	  			<li class="nav-desktop__item nav-mobile__item">
-	  				<a class="nav-link nav-link--primary" href="portfolio.html">Portfolio
-	  				</a>
-	  			</li>
-	  			<li class="nav-desktop__item nav-mobile__item">
-	  				<a class="nav-link nav-link--secondary"
-	  				href="guestbook.html">Guestbook
-	  			</a>
-	  		</li>
-	  		<li  class="nav-desktop__item nav-mobile__item">
-	  			<a class=" nav-link nav-link--tertiary" href="contact.html">Contact
-	  			</a>
-	  		</li>
-	  	</ul>
-	  </nav>
-	  </header>
+  		function showMenu() {
+  			//mobile menu toggle
+  			if (menuDropdownList.style.display === 'flex' ) {
+  				menuDropdownList.style.display = 'none';
+  			}
+  			else {
+  				menuDropdownList.style.display = 'flex';
 
-	  <h1 class="section-heading">Contact Us</h1>
+  			}
+  		}
+
+  			menuClick();
+		}
+		window.onload = init;
+			</script>
+
+			<header class="nav-desktop nav-mobile">
+				<nav>
+					<!-- Mobile Nav header: logo and hamburger menu STARTS -->
+					<div class="nav-mobile__navbar">
+						<a href="index.html" class="nav-mobile__logo">
+							<img id="mobileLogo" src="dist/img/branding/dscvr1.5x.png" alt="DSCVR Logo" /></a>
+							<nav>
+								<ul class="nav-desktop__list">
+
+									<li class="nav-desktop__item">
+										<a class="nav-link nav-link--primary" href="index.html">Home
+										</a>
+									</li>
+									<li class="nav-desktop__item">
+										<a class="nav-link nav-link--secondary" href="portfolio.html">Portfolio
+										</a>
+									</li>
+
+								<li  class="nav-desktop__item">
+									<a class=" nav-link nav-link--tertiary" href="contact.html">Contact
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<a id="hamburger"><i  class="fas fa-bars fa-2x nav-mobile__hamburger"></i></a>
+					</div>
+		
+					<!-- Mobile Nav header: logo and hamburger menu ENDS -->
+
+					<ul id="mobileMenu" class="mobile-menu nav-mobile--bg-stripes">
+									<li class="nav-desktop__item nav-mobile__item">
+										<a class="nav-link nav-link--primary" href="index.html">Home
+										</a>
+									</li>
+									<li class="nav-desktop__item nav-mobile__item">
+										<a class="nav-link nav-link--secondary" href="portfolio.html">Portfolio
+										</a>
+									</li>
+								<li class="nav-desktop__item nav-mobile__item">
+									<a class=" nav-link nav-link--tertiary" href="contact.html">Contact
+									</a>
+								</li>
+							</ul>
+			</nav>
+		</header>
+
+	  <h1 class="section-heading top">Contact Us</h1>
 	  <section class="blurb">
 
 		  <div class="content-block content-block--narrow">
