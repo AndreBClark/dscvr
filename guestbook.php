@@ -1,3 +1,20 @@
+<?php  include('server.php'); ?>
+
+<?php
+	if (isset($_GET['edit'])) {
+		$id = $_GET['edit'];
+		$update = true;
+		$record = mysqli_query($db, "SELECT * FROM info WHERE id=$id");
+
+		if (count($record) == 1 ) {
+			$n = mysqli_fetch_array($record);
+			$first_name = $n['firstName'];
+			$last_name = $n['lastName'];
+			$message = $n['message'];
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +31,7 @@
 			<!-- Mobile Nav header: logo and hamburger menu STARTS -->
 			<div class="nav-mobile__navbar">
 				<a href="index.html" class="nav-mobile__logo">
-					<img id="mobileLogo" src="dist/img/branding/dscvr1.5x.png" alt="DSCVR Logo" /></a>
+					<img id="mobileLogo" src="src/img/branding/dscvr1.5x.png" alt="DSCVR Logo" /></a>
 					<nav>
 						<ul class="nav-desktop__list">
 
@@ -62,11 +79,11 @@
 <div class="hero-image__card">
 <!-- MOBILE HERO IMAGE SLIDER BEGINS -->
   <div class="hero-image__mobile">
-    <img class="hero-image__mobile--slider" src="dist/img/mobile-hero/web.png" alt="Illustration of the web team." />
-  <img class="hero-image__mobile--slider" src="dist/img/mobile-hero/illustration.png" alt="Illustration of the illustration team." />
-  <img class="hero-image__mobile--slider" src="dist/img/mobile-hero/branding.png" alt="Illustration of the branding team." />
-  <img class="hero-image__mobile--slider" src="dist/img/mobile-hero/print.png" alt="Illustration of the print team." />
-  <img class="hero-image__mobile--slider" src="dist/img/mobile-hero/socialmedia.png" alt="Illustration of thes social media team." />
+    <img class="hero-image__mobile--slider" src="src/img/mobile-hero/web.png" alt="Illustration of the web team." />
+  <img class="hero-image__mobile--slider" src="src/img/mobile-hero/illustration.png" alt="Illustration of the illustration team." />
+  <img class="hero-image__mobile--slider" src="src/img/mobile-hero/branding.png" alt="Illustration of the branding team." />
+  <img class="hero-image__mobile--slider" src="src/img/mobile-hero/print.png" alt="Illustration of the print team." />
+  <img class="hero-image__mobile--slider" src="src/img/mobile-hero/socialmedia.png" alt="Illustration of thes social media team." />
 
 </div>
 
@@ -75,58 +92,83 @@
 	DSCVR | Student Portfolio Show <br />
 	<strong>May 3</strong>
 </h1>
-<a href="#home_portfolio_card" class="button button--hoverskew">View Event Details</a>
-<img class="hero-image__desktop" src="dist/img/desktop-hero-01.png" alt="Group illustration." />
-</div>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Name</th>
+			<th colspan="2">Message</th>
+		</tr>
+	</thead>
+
+	<?php while ($row = mysqli_fetch_array($results)) { ?>
+		<tr>
+			<td><?php echo $row['firstName']; ?></td>
+			<td><?php echo $row['lastName']; ?></td>
+			<td><?php echo $row['message']; ?></td>
+			<td>
+				<a href="index.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
+			</td>
+			<td>
+				<a href="server.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+			</td>
+		</tr>
+	<?php } ?>
+</table>
+
+
+
+	<p><span class="error">*</span></p>
+	<form method="post" action="server.php" >
+		<input type="hidden" name="id" value="<?php echo $id; ?>">
+		<div class="input-group name_field">
+			<label>First Name</label>
+			<input type="text" name="first name" value="<?php echo $first_name; ?>">
+			<span class="error">* </span>
+		</div>
+		<div class="input-group name_field">
+			<label>Last Name</label>
+			<input type="text" name="last name" value="<?php echo $last_name; ?>">
+			<span class="error">* </span>
+		</div>
+		<div class="input-group message_field">
+			<label>Message</label>
+			<input type="text" name="message" value="<?php echo $message; ?>">
+			<span class="error">* </span>
+		</div>
+		<div class="input-group">
+			<?php if ($update == true): ?>
+	<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+<?php else: ?>
+	<button class="btn button button-hoverskew button__nocolor-blue" type="submit" name="save" >Save</button>
+<?php endif ?>
+		</div>
+	</form>
+
+<?php
+	echo $first_name;
+	echo $last_name;
+	echo $message;
+?>
+
+
+
 <main>
-	<section class="content-block content-block--flex content-block--wide">
+	<section class="content-block content-block--wide">
 
-<!-- PORTFOLIO CARD STARTS -->
-  <div id="home_portfolio_card" class="card card--blue">
+		<div class="card card--blue">
 
-		<a><img src="dist/img/main-img-assets/Web_Portfolio_1200px_RGB.jpg"></a>
-		<h1>PORTFOLIO</h1>
-    <p>Discover the Graphic & Web Design graduating class of 2019!</p>
-
-	   <div class="cards-button">
-		<a href="" class="button button__nocolor button__nocolor--blue button--hoverskew">Discover Us</a>
-	 </div>
-	</div>
-<!-- PORTFOLIO CARD ENDS -->
-
-<!-- GUESTBOOK CARD STARTS -->
-
-	<div class="card card--yellow">
-
-		<a><img src="src/img/contact-us.jpg"></a>
-			<h1>CONTACT US</h1>
-      <p>The NIC Graphic Design program prepares students for jobs in the graphic & web design markets by teaching them the industry's standards.</p>
-
+			<a><img src="src/img/main-img-assets/dscvr_web_event.png"></a>
+			<h1>DSCVR</h1>
+		   <p class="card__description">
+			Discover us at the NIC Workforce Training Center while our Graphic Design graduates showcase their top work.
+		   </p>
 		   <div class="cards-button">
-			<a href="" class="button button__nocolor button__nocolor--yellow button--hoverskew">Learn More</a>
-		 </div>
-		</div>
-
-    <!-- GUESTBOOK CARD ENDS -->
-
-<!-- FACEBOOK EVENT CARD STARTS -->
-		<div class="card card--pink">
-
-			<a><img src="dist/img/main-img-assets/dscvr_web_event.png"></a>
-      <h1>DSCVR Event</h1>
-      <p>Discover the Graphic & Web Design graduating class of 2019 at the North Idaho College Workforce Training Center. </p>
-      <p>When: Friday, May 3rd 2019 at 4:30 pm to 7 pm <br/>
-      Where: Workforce Training Center <br/>
-              525 Clearwater LoopPost Falls, ID 83854</p>
-              <br/>
-		   <div class="cards-button">
-		   <a href="" class="button button__nocolor button--hoverskew">View Event</a>
+		   <a href="" class="button button--skew button--hoverstraight button__nocolor button__nocolor--blue"><div class="button--inverseskew button--hoverstraight">View Event</div></a>
 		</div>
 		</div>
-
-<!-- FACEBOOK EVENT CARD ENDS -->
-
 	</section>
+
 </main>
 
 
@@ -176,7 +218,7 @@
 					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1628370c9c768e89370a304a8_5a2fcc1521" tabindex="-1" value=""></div>
 					<div class="clear">
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button__nocolor button__nocolor--blue button--hoverskew"></div>
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button--hoverinverseskew button__nocolor button__nocolor--blue"></div>
 					</div>
 	</div>
 				</form>
