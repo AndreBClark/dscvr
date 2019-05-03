@@ -84,8 +84,16 @@
 	    background : $color-secondary;
 	  }
 
-	  &--tertiary:after {
-	    background : $color-tertiary;
+	  &--success:after {
+	    background : $color-success-dark;
+	  }
+
+    &--purple:after {
+	    background : $color-success-dark;
+	  }
+
+    &--purplse:after {
+	    background : $color-purple;
 	  }
 
 	  &:hover:after, &:active:after {
