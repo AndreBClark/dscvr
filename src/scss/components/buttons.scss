@@ -8,6 +8,7 @@
     height: 40px;
     text-align: center;
     transition: 0.5s;
+    transform: translateZ(0);
     &:focus,
     &:hover {
         color: #000;
@@ -69,37 +70,56 @@
       }
 
       &__nocolor--yellow {
+            &:hover {
+                background: $color-secondary-dark;
+
+            }
+
+      }
+
+      &__nocolor--blue {
           &:hover {
+            background: $color-primary-dark;
+
+          }
+
+        }
+
+         &__nocolor--green {
+          &:hover {
+            background: $color-success-dark;
+
+          }
+
+        }
+
+
+
+        &__color--yellow {
+          background: $color-secondary;
+            &:hover {
               background: $color-secondary-dark;
 
-          }
+            }
+
+        }
+
+        &__color--blue {
+          background: $color-primary;
+            &:hover {
+              background: $color-primary-dark;
+
+            }
+
+        }
+
+        &__color--green {
+          background: $color-success;
+          &:hover {
+            background: $color-success-dark;
 
           }
 
-          &__nocolor--blue {
-              &:hover {
-                  background: $color-primary-dark;
+        }
 
-              }
-
-              }
-
-              &__nocolor--green {
-                  &:hover {
-                      background: $color-success-dark;
-
-                  }
-
-                  }
-
-
-    // &.success {
-    //     background: $color-success;
-    //     color: #fff;
-    //     &:focus,
-    //     &:hover {
-    //         background: darken($color-success, 10%);
-    //         color: #fff;
-    //     }
-    // }
 }
