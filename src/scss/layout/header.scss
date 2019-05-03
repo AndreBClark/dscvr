@@ -57,58 +57,7 @@ $h5: calc(.5vw + 1em);
 	}
 }
 
-	.nav-link {
-	  padding         : 0 1em;
-	  color           : $color-dark;
-	  text-decoration : none;
-	  text-decoration : none;
-	  // text-transform  : uppercase;
-	  font-weight     : 700;
-	  letter-spacing  : 0.15em;
-	  transition      : .5s color;
 
-	  &:hover {
-	    color : $color-dark;
-	  }
-
-
-	  &:after {
-	    content    : "";
-	    display    : block;
-	    position   : absolute;
-	    bottom     : 0;
-	    left       : 0;
-	    width      : 0;
-	    height     : .25em;
-	    background : none repeat scroll 0 0 transparent;
-	    transition : width 0.3s ease 0s;
-	  }
-
-	  &--primary:after {
-	    background : $color-primary;
-	  }
-
-	  &--secondary:after {
-	    background : $color-secondary;
-	  }
-
-	  &--tertiary:after {
-	    background : $color-tertiary;
-	  }
-
-    &--success:after {
-	    background : $color-success-dark;
-	  }
-
-    &--purple:after {
-	    background : $color-purple;
-	  }
-
-	  &:hover:after, &:active:after {
-	    left  : 0;
-	    width : 100%;
-	  }
-	}
 
 
 
@@ -147,7 +96,7 @@ $h5: calc(.5vw + 1em);
 			width: 0;
 			left: 0;
 			position: absolute;
-			background: #fff;
+			// background: #fff;
 			transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		}
 
@@ -162,6 +111,14 @@ $h5: calc(.5vw + 1em);
 
 		&--tertiary:after {
 			background : $color-tertiary;
+		}
+
+		&--success:after {
+			background : $color-success;
+		}
+
+		&--purple:after {
+			background : $color-royalpurple;
 		}
 
 		&:hover:after, &:active:after {

@@ -82,6 +82,7 @@ ul.portfolio-content {
 }
 
 .portfolio-content li {
+  padding: 0;
   display: flex;
   max-width: 200px;
   max-height: 200px;
@@ -159,6 +160,7 @@ ul.target_thumb_img{
 }
 
 .target_thumb_img li{
+  padding: 0;
   display: flex;
   justify-content: space-around;
   flex: 0 1 100px;
