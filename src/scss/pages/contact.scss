@@ -18,6 +18,10 @@
   display: inline;
 }
 
+.mc-field-group.input-group ul {
+  display: flex;
+}
+
 .mc-field-group {
   margin-top: 30px;
 }
@@ -77,4 +81,10 @@
     display: block;
     text-align: left;
   }
+}
+
+.input-group input {
+  height: inherit;
+  width: inherit;
+  padding: inherit;
 }
