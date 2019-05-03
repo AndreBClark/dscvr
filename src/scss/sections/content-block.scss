@@ -2,9 +2,20 @@
 	margin: 2em auto;
 	width: 90vw;
 	&--narrow {
-		max-width: 80em;
+		max-width: 50em;
 	}
 	&--wide {
 		max-width: 90em;
 	}
+	&--flex {
+		display: flex;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    .content-block {
+			display:block;
+		}
+  }
 }

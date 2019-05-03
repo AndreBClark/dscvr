@@ -1,0 +1,17 @@
+.bg-stripes {
+	overflow-y: hidden;
+    background: img('branding/stripes.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+	& .hero-image__desktop {
+		display: block;
+		position: fixed;
+		bottom: 0;
+		z-index: -1;
+}
+
+
+
+
+    }

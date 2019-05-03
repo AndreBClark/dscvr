@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./dist/css/app.css">
+	<title>North Idaho College Student Portfolio Show</title>
+</head>
+<body class="bg-stripes">
+
+
+
+	<!---CARD BEGINS-->
+
+	<section class="content-block content-block--wide heading--center">
+
+
+		<!-- MOBILE HERO IMAGE SLIDER ENDS -->
+		<h1 class="heading--h1">D &nbsp;S&nbsp;C&nbsp;V &nbsp;R</h1>
+		<h5 class="heading--h4">Student Portfolio Show</h5>
+		<p class="card__description heading--h5">
+			Discover the Graphic & Web Design graduating class of 2019 <br> at the North Idaho College Workforce Training Center.
+		</p>
+		<h4 class="heading--h4">Friday, May 3rd 4:30PM to 7PM</h4>
+				<a href="https://www.facebook.com/events/296907444564690/?active_tab=about" class="button button__nocolor button__nocolor--yellow button--hoverskew">
+					View Event
+				</a>
+				<a href="https://goo.gl/maps/zaiyNCzZuaN7J7359" class="button button__nocolor button--hoverskew">
+					Directions
+				</a>
+			</div>
+
+		<!---CARD ENDS-------->
+	</section>
+
+	<!-- MOBILE HERO IMAGE MODULE BEGINS -->
+
+	<!-- desktop hero image -->
+	<img class="hero-image__desktop" src="src/img/main-img-assets/desktop-hero-transparent.png" alt="Group illustration." />
+
+
+	<!-- MOBILE HERO IMAGE SLIDER ENDS -->
+
+
+	<script>
+
+
+	function init() {
+		// Start Mobile Hero Image Slider
+		var imageTotal = 0;
+		imageSlider();
+
+		function imageSlider() {
+			var images = document.getElementsByClassName("hero-image__mobile--slider");
+			for (var i = 0; i < images.length; i++) {
+				images[i].style.display = "none";
+			}
+			imageTotal++;
+			if (imageTotal > images.length) { imageTotal = 1
+			}
+			images[imageTotal - 1].style.display = "block";
+			setTimeout (imageSlider, 2000);
+		}
+		// End Mobile Hero Image Slider
+
+
+	};
+
+	window.onload = init;
+
+	</script>
+
+</body>
+</html>
